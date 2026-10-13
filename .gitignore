@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.so
+
+# Virtual environment
+.venv/
+
+# uv
+.python-version
+
+# Data & outputs (large / generated)
+data/
+outputs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Local model checkpoints and analysis results (may be symlinks to external storage)
+/models
+/results
+
+# Personal research notes
+.memo/
+
+# Cluster-specific helper scripts
+.genkai/

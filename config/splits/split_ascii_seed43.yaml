@@ -1,0 +1,2812 @@
+created_at: '2026-06-16T05:46:15.945457+00:00'
+real_dir: data/datasets/font2dataset_ascii_google
+charset: ascii
+val_split: 0.15
+test_split: 0.15
+seed: 43
+n_families:
+  train: 1956
+  val: 419
+  test: 419
+n_samples:
+  train: 249057
+  val: 54248
+  test: 55063
+families:
+  train:
+  - 42dot Sans Light
+  - ABeeZee
+  - AR One Sans
+  - Abel
+  - Abhaya Libre
+  - Abhaya Libre Medium
+  - Aboreto
+  - Abril Fatface
+  - Abyssinica SIL
+  - Actor
+  - Adamina
+  - Adobe Blank
+  - Afacad
+  - Afacad Flux
+  - Agdasima
+  - Agu Display Uzo
+  - Aguafina Script
+  - Akatab Black
+  - Akatab ExtraBold
+  - Akatab SemiBold
+  - Akaya Kanadaka
+  - Akronim
+  - Aladin
+  - Alan Sans Light
+  - Alata
+  - Alatsi
+  - Albert Sans
+  - Aldrich
+  - Alef
+  - Alegreya
+  - Alegreya SC Black
+  - Alegreya SC ExtraBold
+  - Alegreya SC Medium
+  - Alegreya Sans
+  - Alegreya Sans Black
+  - Alegreya Sans Light
+  - Alegreya Sans Medium
+  - Alegreya Sans SC
+  - Alegreya Sans SC Black
+  - Alegreya Sans SC Light
+  - Alegreya Sans SC Thin
+  - Aleo
+  - Alex Brush
+  - Alfa Slab One
+  - Alice
+  - Alike
+  - Alike Angular
+  - Alkalami
+  - Allan
+  - Allerta
+  - Allerta Stencil
+  - Almarai Bold
+  - Almarai ExtraBold
+  - Almendra
+  - Almendra Display
+  - Almendra SC
+  - Alumni Sans Collegiate One
+  - Alumni Sans Pinstripe
+  - Alyamama Light
+  - Amarante
+  - Amarna
+  - Amatic SC
+  - Amethysta
+  - Amiko
+  - Amiko SemiBold
+  - Amiri
+  - Amiri Quran
+  - Amita
+  - AmstelvarAlpha Default
+  - Ancizar Sans Thin
+  - Ancizar Serif Light
+  - Andada Pro
+  - Anek Bangla Medium
+  - Anek Devanagari Medium
+  - Anek Gujarati Medium
+  - Anek Gurmukhi Medium
+  - Anek Kannada Medium
+  - Anek Latin Medium
+  - Anek Odia Medium
+  - Anek Tamil Medium
+  - Anek Telugu Medium
+  - Angkor
+  - Annapurna SIL
+  - Anonymous Pro
+  - Antic Didone
+  - Antic Slab
+  - Anton SC
+  - Antonio
+  - Anuphan
+  - Aoboshi One
+  - Arbutus
+  - Arbutus Slab
+  - Architects Daughter
+  - Archivo Black
+  - Archivo Narrow
+  - Archivo SemiBold
+  - Are You Serious
+  - Aref Ruqaa
+  - Arima Thin
+  - Arimo
+  - Arizonia
+  - Arsenal
+  - Arsenal SC
+  - Artifika
+  - Arvo
+  - Arya
+  - Asap Condensed Black
+  - Asap Condensed Condensed ExtraBold
+  - Asap Condensed Condensed Light
+  - Asap Condensed Condensed Medium
+  - Asap Condensed Condensed Regular
+  - Asap Condensed Condensed SemiBold
+  - Asap Condensed ExtraBold
+  - Asap Condensed ExtraLight
+  - Asap Condensed Medium
+  - Asap Condensed SemiBold
+  - Asar
+  - Asimovian
+  - Assistant ExtraLight
+  - Asta Sans Light
+  - Astloch
+  - Asul
+  - Athiti
+  - Athiti ExtraLight
+  - Athiti Light
+  - Athiti Medium
+  - Athiti SemiBold
+  - Atkinson Hyperlegible
+  - Atkinson Hyperlegible Mono ExtraLight
+  - Atma Light
+  - Atma Medium
+  - Atma SemiBold
+  - Atomic Age
+  - Aubrey
+  - Audiowide
+  - Autour One
+  - Average
+  - Average Sans
+  - Averia Gruesa Libre
+  - Averia Libre
+  - Averia Serif Libre
+  - Averia Serif Libre Light
+  - Azeret Mono Thin
+  - B612
+  - BBH Bartle
+  - BBH Bogle
+  - BBH Hegarty
+  - BIZ UDGothic
+  - BIZ UDMincho
+  - BIZ UDPMincho
+  - BJCree Medium
+  - Babylonica
+  - Bacasime Antique
+  - Bad Script
+  - Badeen Display
+  - Bagel Fat One
+  - Bahiana
+  - Bai Jamjuree
+  - Ballet
+  - Baloo Bhai 2
+  - Baloo Bhaijaan 2
+  - Baloo Chettan 2
+  - Baloo Paaji 2
+  - Baloo Tamma 2
+  - Baloo Tammudu 2
+  - Baloo Thambi 2
+  - Bangers
+  - Barlow
+  - Barlow Black
+  - Barlow Condensed
+  - Barlow Condensed Black
+  - Barlow Condensed ExtraBold
+  - Barlow Condensed ExtraLight
+  - Barlow Condensed Light
+  - Barlow Condensed Medium
+  - Barlow Condensed SemiBold
+  - Barlow ExtraBold
+  - Barlow ExtraLight
+  - Barlow Light
+  - Barlow Medium
+  - Barlow Semi Condensed Black
+  - Barlow Semi Condensed ExLight
+  - Barlow Semi Condensed Light
+  - Barlow Semi Condensed Medium
+  - Barlow Semi Condensed SemiBold
+  - Barlow Thin
+  - Barrio
+  - Baskervville
+  - Batang
+  - BatangChe
+  - Battambang
+  - Bayon
+  - Be Vietnam Pro
+  - Be Vietnam Pro Black
+  - Be Vietnam Pro ExtraBold
+  - Be Vietnam Pro ExtraLight
+  - Beiruti
+  - Belanosima SemiBold
+  - Belgrano
+  - Bellefair
+  - Belleza
+  - Bellota
+  - Bellota Light
+  - Bellota Text
+  - Bellota Text Light
+  - Bentham
+  - Berkshire Swash
+  - Besley
+  - Betania Patmos
+  - Betania Patmos GDL
+  - Betania Patmos In
+  - Betania Patmos In GDL
+  - Beth Ellen
+  - Bhavuka
+  - Big Shoulders Inline Display SC Thin
+  - Big Shoulders Inline Text Thin
+  - Big Shoulders Stencil Display SC Thin
+  - Big Shoulders Stencil Display Thin
+  - Big Shoulders Stencil Text SC Thin
+  - Big Shoulders Stencil Text Thin
+  - Big Shoulders Text Thin
+  - Big Shoulders Thin
+  - Bilbo
+  - BioRhyme Expanded
+  - BioRhyme Expanded ExtraBold
+  - BioRhyme Expanded ExtraLight
+  - BioRhyme Expanded Light
+  - BioRhyme ExtraBold
+  - Birthstone Bounce
+  - Birthstone Bounce Medium
+  - Biryani
+  - Biryani Black
+  - Biryani ExtraBold
+  - Biryani ExtraLight
+  - Biryani Light
+  - Biryani SemiBold
+  - Bitcount
+  - Bitcount Grid Double
+  - Bitcount Grid Double Ink
+  - Bitcount Grid Single
+  - Bitcount Grid Single Ink
+  - Bitcount Ink
+  - Bitcount Prop Double
+  - Bitcount Prop Double Ink
+  - Bitcount Prop Single
+  - Bitter Thin
+  - Black And White Picture
+  - Blaka
+  - Blaka Ink
+  - Blinker
+  - Blinker Black
+  - Blinker ExtraBold
+  - Blinker ExtraLight
+  - Blinker SemiBold
+  - Bokor
+  - Bona Nova
+  - Bona Nova SC
+  - Bonbon
+  - Bonheur Royale
+  - Boogaloo
+  - Borel
+  - Bowlby One
+  - Bowlby One SC
+  - Bpmf Huninn
+  - Bpmf Zihi Kai Std
+  - Braah One
+  - Brawler
+  - Bree Serif
+  - Briem Hand Thin
+  - Bruno Ace SC
+  - Bubblegum Sans
+  - Buda Light
+  - Buenard
+  - Bungee
+  - Bungee Color Regular
+  - Bungee Inline
+  - Bungee Outline
+  - Bungee Spice
+  - Bungee Tint
+  - Butcherman
+  - Cabin Condensed
+  - Cabin Condensed Medium
+  - Cabin Condensed SemiBold
+  - Cactus Classical Serif
+  - Caesar Dressing
+  - Cagliostro
+  - Cairo Play
+  - Cal Sans
+  - Caladea
+  - Calistoga
+  - Calligraffitti
+  - Cambay
+  - Cambo
+  - Candal
+  - Cantarell
+  - Cantata One
+  - Cantora One
+  - Capriola
+  - Carattere
+  - Carlito
+  - Carme
+  - Carrois Gothic
+  - Carrois Gothic SC
+  - Carter One
+  - Cascadia Code
+  - Castoro
+  - Castoro Titling
+  - Catamaran Thin
+  - Caudex
+  - Cause
+  - Caveat
+  - Cedarville Cursive
+  - Ceviche One
+  - Chakra Petch ExtraLight
+  - Chakra Petch Light
+  - Chakra Petch Medium
+  - Chakra Petch SemiBold
+  - Changa
+  - Charis SIL
+  - Charm
+  - Charmonman
+  - Chathura
+  - Chathura Light
+  - Chau Philomene One
+  - Chela One
+  - Chelsea Market
+  - Chenla
+  - Cherish
+  - Cherry Bomb One
+  - Cherry Cream Soda
+  - Cherry Swash
+  - Chewy
+  - Chicle
+  - Chiron GoRound TC ExtraLight
+  - Chiron Hei HK ExtraLight
+  - Chiron Sung HK ExtraLight
+  - Chivo Mono Medium
+  - Chocolate Classical Sans
+  - Chokokutai
+  - Cinzel Decorative
+  - Cinzel Decorative Black
+  - Clicker Script
+  - Climate Crisis
+  - Coda ExtraBold
+  - Coiny
+  - Comfortaa
+  - Comforter Brush
+  - Comic Neue
+  - Commissioner Thin
+  - Content
+  - Contrail One
+  - Convergence
+  - Cookie
+  - Corben
+  - Corinthia
+  - Cormorant Garamond Light
+  - Cormorant Infant Light
+  - Cormorant Light
+  - Cormorant SC
+  - Cormorant SC Medium
+  - Cormorant SC SemiBold
+  - Cormorant Unicase Light
+  - Cormorant Unicase Medium
+  - Cormorant Unicase SemiBold
+  - Cormorant Upright
+  - Cormorant Upright Light
+  - Cormorant Upright SemiBold
+  - Cossette Titre
+  - Cousine
+  - Coustard
+  - Coustard Black
+  - Covered By Your Grace
+  - Crafty Girls
+  - Creepster
+  - Crete Round
+  - Crimson Pro
+  - Crimson Text
+  - Crushed
+  - Cute Font
+  - Cutive
+  - DM Mono
+  - DM Mono Light
+  - DM Sans 9pt
+  - DM Serif Display
+  - DM Serif Text
+  - Dai Banna SIL Medium
+  - Damion
+  - Dancing Script
+  - Danfo
+  - Darumadrop One
+  - Datatype
+  - David Libre
+  - David Libre Medium
+  - Days One
+  - Decovar Alpha Regular24
+  - Dekko
+  - Dela Gothic One
+  - Delicious Handrawn
+  - Delius
+  - Delius Swash Caps
+  - Delius Unicase
+  - Della Respira
+  - Denk One
+  - Devonshire
+  - Dhyana
+  - Didact Gothic
+  - Diphylleia
+  - Do Hyeon
+  - Dokdo
+  - Domine
+  - Donegal One
+  - Dongle
+  - Dongle Light
+  - Dorsa
+  - Dosis
+  - Doto Black
+  - Dr Sugiyama
+  - DynaPuff
+  - Eagle Lake
+  - East Sea Dokdo
+  - Eater
+  - Economica
+  - Edu AU VIC WA NT Arrows
+  - Edu AU VIC WA NT Dots
+  - Edu AU VIC WA NT Guides
+  - Edu AU VIC WA NT Hand
+  - Edu AU VIC WA NT Pre
+  - Edu NSW ACT Foundation
+  - Edu SA Beginner
+  - Edu TAS Beginner
+  - Edu VIC WA NT Beginner
+  - Ek Mukta
+  - Ek Mukta ExtraBold
+  - Ek Mukta ExtraLight
+  - Ek Mukta Light
+  - Ek Mukta Medium
+  - Ek Mukta SemiBold
+  - El Messiri
+  - Elms Sans Thin
+  - Elsie
+  - Elsie Swash Caps
+  - Emblema One
+  - Emilys Candy
+  - Encode Sans Condensed
+  - Encode Sans Condensed Black
+  - Encode Sans Condensed ExLight
+  - Encode Sans Condensed ExtraBold
+  - Encode Sans Condensed Light
+  - Encode Sans Condensed Medium
+  - Encode Sans Condensed SemiBold
+  - Encode Sans Expanded
+  - Encode Sans Expanded Black
+  - Encode Sans Expanded Medium
+  - Encode Sans Expanded SemiBold
+  - Encode Sans Expanded Thin
+  - Encode Sans Semi Condensed
+  - Encode Sans Semi Condensed ExBd
+  - Encode Sans Semi Condensed ExLight
+  - Encode Sans Semi Condensed Light
+  - Encode Sans Semi Condensed Medium
+  - Encode Sans Semi Condensed SmBd
+  - Encode Sans Semi Condensed Thin
+  - Encode Sans Semi Expanded Black
+  - Encode Sans Semi Expanded ExBd
+  - Encode Sans Semi Expanded ExLight
+  - Encode Sans Semi Expanded SmBd
+  - Enriqueta
+  - Enriqueta Medium
+  - Enriqueta SemiBold
+  - Epilogue
+  - Epunda Sans Light
+  - Erica One
+  - Estedad
+  - Estonia
+  - Euphoria Script
+  - Ewert
+  - Exile
+  - Exo
+  - Explora
+  - Faculty Glyphic
+  - Fahkwang
+  - Fahkwang ExtraLight
+  - Fahkwang Light
+  - Fahkwang Medium
+  - Fahkwang SemiBold
+  - Familjen Grotesk
+  - Farro
+  - Farro Light
+  - Fascinate
+  - Fascinate Inline
+  - Faster One
+  - Fasthand
+  - Federo
+  - Fenix
+  - Festive
+  - Finger Paint
+  - Finlandica
+  - Finlandica Headline Thin
+  - Finlandica Text Medium
+  - Fira Code Light
+  - Fira Mono Medium
+  - Fira Sans Condensed Black
+  - Fira Sans Condensed ExtraBold
+  - Fira Sans Condensed ExtraLight
+  - Fira Sans Condensed Light
+  - Fira Sans Condensed Medium
+  - Fira Sans Condensed SemiBold
+  - Fira Sans Condensed Thin
+  - Fira Sans Extra Condensed
+  - Fira Sans Extra Condensed Black
+  - Fira Sans Extra Condensed ExtraBold
+  - Fira Sans Extra Condensed Light
+  - Fira Sans Extra Condensed SemiBold
+  - Fira Sans Extra Condensed Thin
+  - Fira Sans ExtraLight
+  - Fira Sans SemiBold
+  - Fjalla One
+  - Flamenco
+  - Flavors
+  - Fleur De Leah
+  - Flow Block
+  - Flow Circular
+  - Flow Rounded
+  - Foldit Thin
+  - Fondamento
+  - Fragment Mono
+  - Fragment Mono SC
+  - Francois One
+  - Fraunces
+  - Freckle Face
+  - Fredoka Light
+  - Freehand
+  - Fresca
+  - Frijole
+  - Fruktur
+  - Fugaz One
+  - Fuggles
+  - Fuzzy Bubbles
+  - GFS Didot
+  - GFS Neohellenic
+  - Ga Maamli
+  - Gabarito
+  - Gabriela
+  - Gaegu
+  - Gaegu Light
+  - Gafata
+  - Gajraj One
+  - Galada
+  - Galdeano
+  - Gantari
+  - Gasoek One
+  - Gayathri
+  - Gayathri Thin
+  - Geist
+  - Gelasio
+  - Gemunu Libre ExtraLight
+  - Gentium Book Plus
+  - Geo
+  - Geologica Thin
+  - Geom
+  - Georama ExtraCondensed Thin
+  - Geostar
+  - Geostar Fill
+  - Gideon Roman
+  - Give You Glory
+  - Glegoo
+  - Gloria Hallelujah
+  - Gluten Thin
+  - Goblin One
+  - Gochi Hand
+  - Golos Text
+  - Google Sans Code
+  - Gothic A1 Light
+  - Goudy Bookletter 1911
+  - Gowun Batang
+  - Grand Hotel
+  - Grape Nuts
+  - Gravitas One
+  - Grenze
+  - Griffy
+  - Gudea
+  - Gulim
+  - GulimChe
+  - Gulzar
+  - Gungsuh
+  - GungsuhChe
+  - Gupter
+  - Gupter Medium
+  - Gwendolyn
+  - Hachi Maru Pop
+  - Hahmlet
+  - Halant
+  - Halant Light
+  - Halant SemiBold
+  - Hammersmith One
+  - Hanalei
+  - Hanalei Fill
+  - Handjet
+  - Hanuman
+  - Happy Monkey
+  - Harmattan Medium
+  - Harmattan SemiBold
+  - HeadlandOne
+  - Hedvig Letters Sans
+  - Hedvig Letters Serif 24pt
+  - Henny Penny
+  - Hepta Slab ExtraLight
+  - Hermeneus One
+  - Hi Melody
+  - Hina Mincho
+  - Hind
+  - Hind Colombo
+  - Hind Colombo Light
+  - Hind Guntur
+  - Hind Guntur Light
+  - Hind Guntur Medium
+  - Hind Guntur SemiBold
+  - Hind Jalandhar Light
+  - Hind Jalandhar SemiBold
+  - Hind Kochi
+  - Hind Kochi Light
+  - Hind Kochi Medium
+  - Hind Kochi SemiBold
+  - Hind Light
+  - Hind Madurai SemiBold
+  - Hind Medium
+  - Hind Mysuru
+  - Hind Mysuru Light
+  - Hind Mysuru Medium
+  - Hind SemiBold
+  - Hind Siliguri
+  - Hind Siliguri Light
+  - Hind Siliguri Medium
+  - Hind Siliguri SemiBold
+  - Hind Vadodara
+  - Hind Vadodara Light
+  - Hind Vadodara SemiBold
+  - Holtwood One SC
+  - Homemade Apple
+  - Honk
+  - Hubballi
+  - Hubot Sans Condensed ExtraLight
+  - Huninn
+  - IBM Plex Mono
+  - IBM Plex Mono ExtraLight
+  - IBM Plex Mono Light
+  - IBM Plex Mono Medium
+  - IBM Plex Mono Thin
+  - IBM Plex Sans
+  - IBM Plex Sans Arabic
+  - IBM Plex Sans Arabic ExtraLight
+  - IBM Plex Sans Arabic Light
+  - IBM Plex Sans Arabic Medium
+  - IBM Plex Sans Arabic SemiBold
+  - IBM Plex Sans Arabic Thin
+  - IBM Plex Sans Condensed
+  - IBM Plex Sans Condensed ExtraLight
+  - IBM Plex Sans Condensed Light
+  - IBM Plex Sans Condensed SemiBold
+  - IBM Plex Sans Condensed Thin
+  - IBM Plex Sans Devanagari
+  - IBM Plex Sans Devanagari Light
+  - IBM Plex Sans Hebrew Light
+  - IBM Plex Sans Hebrew Medium
+  - IBM Plex Sans Hebrew SemiBold
+  - IBM Plex Sans JP
+  - IBM Plex Sans JP Light
+  - IBM Plex Sans JP Medium
+  - IBM Plex Sans JP SemiBold
+  - IBM Plex Sans JP Thin
+  - IBM Plex Sans KR
+  - IBM Plex Sans KR Light
+  - IBM Plex Sans KR Medium
+  - IBM Plex Sans KR SemiBold
+  - IBM Plex Sans Thai Light
+  - IBM Plex Sans Thai Looped
+  - IBM Plex Sans Thai Looped ExtraLight
+  - IBM Plex Sans Thai Looped Light
+  - IBM Plex Sans Thai Looped Medium
+  - IBM Plex Sans Thai Looped SemiBold
+  - IBM Plex Sans Thai Looped Thin
+  - IBM Plex Sans Thai Medium
+  - IBM Plex Sans Thai SemiBold
+  - IBM Plex Sans Thai Thin
+  - IBM Plex Serif
+  - IBM Plex Serif Medium
+  - IBM Plex Serif SemiBold
+  - IBM Plex Serif Thin
+  - IM FELL DW Pica
+  - IM FELL DW Pica SC
+  - IM FELL Double Pica
+  - IM FELL Double Pica SC
+  - IM FELL English
+  - IM FELL English SC
+  - IM FELL French Canon
+  - IM FELL French Canon SC
+  - Iansui
+  - Ibarra Real Nova
+  - Iceberg
+  - Idiqlat
+  - Idiqlat ExtraLight
+  - Idiqlat Light
+  - Imperial Script
+  - Imprima
+  - Inclusive Sans
+  - Inconsolata Black
+  - Inconsolata Bold
+  - Inconsolata Condensed
+  - Inconsolata Condensed Black
+  - Inconsolata Condensed Bold
+  - Inconsolata Condensed ExtraBold
+  - Inconsolata Condensed ExtraLight
+  - Inconsolata Condensed Medium
+  - Inconsolata Condensed SemiBold
+  - Inconsolata Expanded
+  - Inconsolata Expanded Black
+  - Inconsolata Expanded Bold
+  - Inconsolata Expanded ExtraLight
+  - Inconsolata Expanded Light
+  - Inconsolata Expanded SemiBold
+  - Inconsolata ExtraBold
+  - Inconsolata ExtraCondensed ExtraBold
+  - Inconsolata ExtraCondensed ExtraLight
+  - Inconsolata ExtraCondensed Medium
+  - Inconsolata ExtraCondensed SemiBold
+  - Inconsolata ExtraExpanded Black
+  - Inconsolata ExtraExpanded Bold
+  - Inconsolata ExtraExpanded ExtraLight
+  - Inconsolata ExtraExpanded Light
+  - Inconsolata ExtraExpanded Medium
+  - Inconsolata ExtraExpanded SemiBold
+  - Inconsolata ExtraLight
+  - Inconsolata Medium
+  - Inconsolata SemiBold
+  - Inconsolata SemiCondensed
+  - Inconsolata SemiCondensed ExtraBold
+  - Inconsolata SemiCondensed ExtraLight
+  - Inconsolata SemiCondensed SemiBold
+  - Inconsolata SemiExpanded Black
+  - Inconsolata SemiExpanded Bold
+  - Inconsolata SemiExpanded ExtraLight
+  - Inconsolata SemiExpanded SemiBold
+  - Inconsolata UltraCondensed Black
+  - Inconsolata UltraCondensed Bold
+  - Inconsolata UltraCondensed ExtraBold
+  - Inconsolata UltraCondensed SemiBold
+  - Inconsolata UltraExpanded Black
+  - Inconsolata UltraExpanded Bold
+  - Inconsolata UltraExpanded ExtraLight
+  - Inconsolata UltraExpanded Light
+  - Inconsolata UltraExpanded Medium
+  - Inconsolata UltraExpanded SemiBold
+  - Inder
+  - Indie Flower
+  - Ingrid Darling
+  - Inknut Antiqua ExtraBold
+  - Inknut Antiqua Light
+  - Inknut Antiqua Medium
+  - Inknut Antiqua SemiBold
+  - Inria Sans Light
+  - Inria Serif
+  - Inria Serif Light
+  - Instrument Sans
+  - Intel One Mono Medium
+  - Intel One Mono SemiBold
+  - Inter
+  - Inter Tight
+  - Iosevka Charon
+  - Iosevka Charon Light
+  - Iosevka Charon Mono
+  - Iosevka Charon Mono Light
+  - Iosevka Charon Mono Medium
+  - Irish Grover
+  - Island Moments
+  - Istok Web
+  - Italiana
+  - Italianno
+  - Jacquard 12
+  - Jacquard 12 Charted
+  - Jacquard 24
+  - Jacquard 24 Charted
+  - Jacquarda Bastarda 9 Charted
+  - Jacques Francois
+  - Jaini
+  - Jaini Purva
+  - Jaldi
+  - Jaro
+  - JejuGothic
+  - JejuHallasan
+  - JejuMyeongjo
+  - Jersey 10
+  - Jersey 15
+  - Jersey 25
+  - Jersey 25 Charted
+  - JetBrains Mono
+  - Jim Nightshade
+  - Joan
+  - Jockey One
+  - Jomolhari
+  - Josefin Sans Thin
+  - Josefin Slab Thin
+  - Jost
+  - Julee
+  - Junge
+  - Jura Light
+  - Just Another Hand
+  - K2D
+  - K2D ExtraBold
+  - K2D ExtraLight
+  - K2D Thin
+  - Kablammo
+  - Kadwa
+  - Kaisei HarunoUmi
+  - Kaisei Opti
+  - Kaisei Tokumin ExtraBold
+  - Kaisei Tokumin Medium
+  - Kalam Light
+  - Kameron
+  - Kanchenjunga
+  - Kanchenjunga Medium
+  - Kanchenjunga SemiBold
+  - Kanit
+  - Kanit ExtraBold
+  - Kanit ExtraLight
+  - Kanit Medium
+  - Kanit Thin
+  - Kantumruy Pro
+  - Kapakana
+  - Karantina
+  - Karla Tamil Inclined
+  - Karla Tamil Upright
+  - Karma Light
+  - Karma Medium
+  - Karma SemiBold
+  - Kavivanar
+  - Kavoon
+  - Kay Pho Du
+  - Kay Pho Du Medium
+  - Keania One
+  - Kedebideri
+  - Kedebideri ExtraBold
+  - Kedebideri Medium
+  - Kelly Slab
+  - Kenia
+  - Khand
+  - Khand Light
+  - Khand SemiBold
+  - Khula
+  - Khula Light
+  - Khula SemiBold
+  - Kings
+  - Kite One
+  - Kiwi Maru Light
+  - Klee One SemiBold
+  - Knewave
+  - KoHo
+  - KoHo ExtraLight
+  - KoHo Light
+  - KoHo Medium
+  - KoHo SemiBold
+  - KoPub Batang
+  - Kodchasan
+  - Kodchasan ExtraLight
+  - Kodchasan SemiBold
+  - Koh Santepheap Black
+  - Koh Santepheap Thin
+  - Konkhmer Sleokchher
+  - Kosugi
+  - Kosugi Maru
+  - Kotta One
+  - Kranky
+  - Kreon Light
+  - Krub ExtraLight
+  - Krub Medium
+  - Kufam
+  - Kulim Park
+  - Kulim Park SemiBold
+  - LINE Seed JP
+  - LINE Seed JP ExtraBold
+  - LINE Seed JP Thin
+  - LXGW Marker Gothic
+  - LXGW WenKai Mono TC
+  - LXGW WenKai Mono TC Light
+  - LXGW WenKai TC
+  - Labrada
+  - Laila
+  - Laila Light
+  - Laila Medium
+  - Laila SemiBold
+  - Lakki Reddy
+  - Lalezar
+  - Langar
+  - Lateef ExtraBold
+  - Lateef Light
+  - Lateef Medium
+  - Lateef SemiBold
+  - Lato Black
+  - Lato ExtraBold
+  - Lato ExtraLight
+  - Lato Light
+  - Lato Medium
+  - Lato SemiBold
+  - Lato Thin
+  - Lavishly Yours
+  - League Gothic
+  - League Script
+  - League Spartan Thin
+  - Ledger
+  - Lekton
+  - Lemonada
+  - Lexend Exa
+  - Lexend Giga
+  - Lexend Mega
+  - Lexend Tera
+  - Lexend Zetta
+  - Libertinus Sans
+  - Libertinus Serif
+  - Libertinus Serif Display
+  - Libertinus Serif SemiBold
+  - Libre Barcode 128 Text
+  - Libre Barcode 39
+  - Libre Barcode 39 Extended
+  - Libre Barcode 39 Extended Text
+  - Libre Barcode 39 Text
+  - Libre Barcode EAN13 Text
+  - Libre Baskerville
+  - Libre Caslon Display
+  - Libre Franklin Thin
+  - Life Savers
+  - Ligconsolata
+  - Lilita One
+  - Lily Script One
+  - Linden Hill
+  - Linefont Thin
+  - Lisu Bosa
+  - Lisu Bosa Black
+  - Lisu Bosa ExtraBold
+  - Lisu Bosa ExtraLight
+  - Lisu Bosa Light
+  - Lisu Bosa SemiBold
+  - Liter
+  - Literata
+  - Livvic
+  - Livvic Black
+  - Livvic ExtraLight
+  - Livvic Light
+  - Livvic SemiBold
+  - Livvic Thin
+  - Lohit Bengali
+  - Lohit Tamil
+  - Londrina Sketch
+  - Londrina Solid
+  - Londrina Solid Black
+  - Londrina Solid Light
+  - Long Cang
+  - Lora
+  - Love Light
+  - Lovers Quarrel
+  - Luckiest Guy
+  - Lugrasimo
+  - Lumanosimo
+  - Lunasima
+  - Lusitana
+  - Luxurious Script
+  - M PLUS 1 Code
+  - M PLUS 1 Thin
+  - M PLUS 1p
+  - M PLUS 1p ExtraBold
+  - M PLUS 1p Light
+  - M PLUS 1p Thin
+  - Ma Shan Zheng
+  - Macondo Swash Caps
+  - Mada
+  - Madimi One
+  - Magra
+  - Maiden Orange
+  - Maitree
+  - Maitree ExtraLight
+  - Maitree Light
+  - Maitree Medium
+  - Maitree SemiBold
+  - Mali
+  - Mali ExtraLight
+  - Mali Light
+  - Mali Medium
+  - Mali SemiBold
+  - Mallanna
+  - Manjari
+  - Manjari Thin
+  - Manrope ExtraLight
+  - Mansalva
+  - Manuale
+  - Manufacturing Consent
+  - Marcellus
+  - Marck Script
+  - Margarine
+  - Marhey Light
+  - Markazi Text
+  - Marmelad
+  - Martel
+  - Martel DemiBold
+  - Martel ExtraBold
+  - Martel Light
+  - Martel Sans ExtraBold
+  - Martel Sans ExtraLight
+  - Martel Sans Light
+  - Martel Sans SemiBold
+  - Martel UltraLight
+  - Marvel
+  - Mate
+  - Mate SC
+  - Matemasie
+  - Maven Pro
+  - McLaren
+  - Mea Culpa
+  - Meddon
+  - MedievalSharp
+  - Meera Inimai
+  - Megrim
+  - Menbere
+  - Meow Script
+  - Merienda
+  - Merriweather Light
+  - Merriweather Sans
+  - Mervale Script
+  - Metal
+  - Metal Mania
+  - Metamorphous
+  - Miama
+  - Michroma
+  - Micro 5
+  - Micro 5 Charted
+  - Miltonian
+  - Miltonian Tattoo
+  - Mingzat
+  - Miniver
+  - Miriam Libre
+  - Mirza
+  - Mirza SemiBold
+  - Mitr Light
+  - Mitr Medium
+  - Mitr SemiBold
+  - Mochiy Pop P One
+  - Modern Antiqua
+  - Mogra
+  - Mohave Light
+  - Molengo
+  - Molle
+  - Momo Signature
+  - Mona Sans ExtraLight
+  - Monda
+  - Monofett
+  - Monoton
+  - Monsieur La Doulaise
+  - Montaga
+  - Montagu Slab
+  - MonteCarlo
+  - Montserrat Alternates Black
+  - Montserrat Alternates ExLight
+  - Montserrat Alternates ExtraBold
+  - Montserrat Alternates Medium
+  - Montserrat Alternates SemiBold
+  - Montserrat Alternates Thin
+  - Montserrat Subrayada
+  - Montserrat Thin
+  - Montserrat Underline Thin
+  - Moo Lah Lah
+  - Moon Dance
+  - Moulpali
+  - Mozilla Headline ExtraLight
+  - Mr Bedfort
+  - Mr Dafoe
+  - Mrs Sheppards
+  - Ms Madi
+  - Mukta
+  - Mukta Light
+  - Mukta Mahee
+  - Mukta Mahee ExtraBold
+  - Mukta Mahee ExtraLight
+  - Mukta Mahee Light
+  - Mukta Mahee Medium
+  - Mukta Mahee SemiBold
+  - Mukta Malar ExtraBold
+  - Mukta Malar ExtraLight
+  - Mukta Malar Medium
+  - Mukta Malar SemiBold
+  - Mukta Medium
+  - Mukta SemiBold
+  - Mukta Vaani ExtraBold
+  - Mukta Vaani SemiBold
+  - Mulish ExtraLight
+  - Murecho Thin
+  - My Soul
+  - Myanmar Khyay
+  - Mystery Quest
+  - NATS
+  - Nabla
+  - Namdhinggo
+  - Namdhinggo ExtraBold
+  - Namdhinggo Medium
+  - Namdhinggo SemiBold
+  - Nanum Brush Script
+  - NanumGothicCoding
+  - NanumGothicExtraBold
+  - NanumMyeongjoExtraBold
+  - Narnoor
+  - Narnoor ExtraBold
+  - Narnoor Medium
+  - Narnoor SemiBold
+  - Neonderthaw
+  - Nerko One
+  - Neucha
+  - Neuton ExtraBold
+  - Neuton ExtraLight
+  - New Amsterdam
+  - New Tegomin
+  - News Cycle
+  - Newsreader 16pt
+  - Nico Moji
+  - Niconne
+  - Niramit Light
+  - Niramit Medium
+  - Niramit SemiBold
+  - Nobile
+  - Nobile Medium
+  - Nokora
+  - Norican
+  - Nosifer Caps
+  - Notable
+  - Nothing You Could Do
+  - Noticia Text
+  - Noto Color Emoji
+  - Noto Kufi Arabic
+  - Noto Naskh Arabic
+  - Noto Naskh Arabic UI
+  - Noto Nastaliq Urdu
+  - Noto Sans
+  - Noto Sans Adlam
+  - Noto Sans Adlam Unjoined
+  - Noto Sans Anatolian Hieroglyphs
+  - Noto Sans Arabic
+  - Noto Sans Avestan
+  - Noto Sans Balinese
+  - Noto Sans Bamum
+  - Noto Sans Bassa Vah
+  - Noto Sans Batak
+  - Noto Sans Bengali
+  - Noto Sans Bengali UI
+  - Noto Sans Bhaiksuki
+  - Noto Sans Carian
+  - Noto Sans Cham
+  - Noto Sans Cherokee
+  - Noto Sans Coptic
+  - Noto Sans Cypriot
+  - Noto Sans Deseret
+  - Noto Sans Devanagari UI Black
+  - Noto Sans Devanagari UI ExtraBold
+  - Noto Sans Devanagari UI Light
+  - Noto Sans Devanagari UI SemiBold
+  - Noto Sans Devanagari UI Thin
+  - Noto Sans Duployan
+  - Noto Sans Elymaic
+  - Noto Sans Ethiopic
+  - Noto Sans Georgian
+  - Noto Sans Glagolitic
+  - Noto Sans Gothic
+  - Noto Sans Grantha
+  - Noto Sans Gujarati
+  - Noto Sans Gujarati UI
+  - Noto Sans Gujarati UI ExtraBold
+  - Noto Sans Gujarati UI Light
+  - Noto Sans Gujarati UI Medium
+  - Noto Sans Gujarati UI SemiBold
+  - Noto Sans Gujarati UI Thin
+  - Noto Sans Gurmukhi
+  - Noto Sans Gurmukhi UI
+  - Noto Sans Hanifi Rohingya
+  - Noto Sans Hanunoo
+  - Noto Sans Hatran
+  - Noto Sans Imperial Aramaic
+  - Noto Sans Indic Siyaq Numbers
+  - Noto Sans Inscriptional Pahlavi
+  - Noto Sans Inscriptional Parthian
+  - Noto Sans JP Thin
+  - Noto Sans Javanese
+  - Noto Sans KR Thin
+  - Noto Sans Kaithi
+  - Noto Sans Kannada UI
+  - Noto Sans Kayah Li
+  - Noto Sans Khmer
+  - Noto Sans Khmer UI
+  - Noto Sans Khojki
+  - Noto Sans Lao
+  - Noto Sans Lao Looped
+  - Noto Sans Lao UI
+  - Noto Sans Lepcha
+  - Noto Sans Limbu
+  - Noto Sans Linear A
+  - Noto Sans Linear B
+  - Noto Sans Lydian
+  - Noto Sans Mahajani
+  - Noto Sans Malayalam
+  - Noto Sans Malayalam UI
+  - Noto Sans Mandaic
+  - Noto Sans Manichaean
+  - Noto Sans Marchen
+  - Noto Sans Math
+  - Noto Sans Mayan Numerals
+  - Noto Sans Meetei Mayek
+  - Noto Sans Mende Kikakui
+  - Noto Sans Modi
+  - Noto Sans Mongolian
+  - Noto Sans Myanmar
+  - Noto Sans Myanmar UI
+  - Noto Sans Myanmar UI Black
+  - Noto Sans Myanmar UI ExtraBold
+  - Noto Sans Myanmar UI ExtraLight
+  - Noto Sans Myanmar UI Light
+  - Noto Sans Myanmar UI Medium
+  - Noto Sans Myanmar UI Thin
+  - Noto Sans NKo
+  - Noto Sans Nandinagari
+  - Noto Sans New Tai Lue
+  - Noto Sans Nushu
+  - Noto Sans Ogham
+  - Noto Sans Ol Chiki
+  - Noto Sans Old Hungarian
+  - Noto Sans Old Italic
+  - Noto Sans Old North Arabian
+  - Noto Sans Old Permic
+  - Noto Sans Old Sogdian
+  - Noto Sans Old South Arabian
+  - Noto Sans Old Turkic
+  - Noto Sans Oriya
+  - Noto Sans Oriya UI Blk
+  - Noto Sans Oriya UI Thin
+  - Noto Sans Osage
+  - Noto Sans Osmanya
+  - Noto Sans Pahawh Hmong
+  - Noto Sans Pau Cin Hau
+  - Noto Sans PhagsPa
+  - Noto Sans Psalter Pahlavi
+  - Noto Sans Runic
+  - Noto Sans SC Thin
+  - Noto Sans Samaritan
+  - Noto Sans Saurashtra
+  - Noto Sans Sharada
+  - Noto Sans Shavian
+  - Noto Sans Siddham
+  - Noto Sans Sogdian
+  - Noto Sans Sunuwar
+  - Noto Sans Syloti Nagri
+  - Noto Sans Symbols
+  - Noto Sans Symbols 2
+  - Noto Sans Syriac
+  - Noto Sans Syriac Eastern
+  - Noto Sans Syriac Western
+  - Noto Sans TC Thin
+  - Noto Sans Tagalog
+  - Noto Sans Tai Le
+  - Noto Sans Takri
+  - Noto Sans Tamil
+  - Noto Sans Tamil Supplement
+  - Noto Sans Tamil UI
+  - Noto Sans Tangsa
+  - Noto Sans Telugu
+  - Noto Sans Thaana
+  - Noto Sans Thai
+  - Noto Sans Thai Looped
+  - Noto Sans Thai UI
+  - Noto Sans Tifinagh
+  - Noto Sans Ugaritic
+  - Noto Sans Vai
+  - Noto Sans Vithkuqi
+  - Noto Sans Warang Citi
+  - Noto Sans Yi
+  - Noto Serif
+  - Noto Serif Ahom
+  - Noto Serif Armenian
+  - Noto Serif Bengali
+  - Noto Serif Dives Akuru
+  - Noto Serif Dogra
+  - Noto Serif Ethiopic
+  - Noto Serif Grantha
+  - Noto Serif Gujarati
+  - Noto Serif Gurmukhi
+  - Noto Serif Hebrew
+  - Noto Serif Hentaigana ExtraLight
+  - Noto Serif Hmong Nyiakeng
+  - Noto Serif KR ExtraLight
+  - Noto Serif Kannada
+  - Noto Serif Khmer
+  - Noto Serif Khojki
+  - Noto Serif Lao
+  - Noto Serif Makasar
+  - Noto Serif Malayalam
+  - Noto Serif Myanmar
+  - Noto Serif Myanmar ExtBd
+  - Noto Serif Myanmar ExtLt
+  - Noto Serif Myanmar Light
+  - Noto Serif Myanmar Med
+  - Noto Serif Myanmar SemBd
+  - Noto Serif Myanmar Thin
+  - Noto Serif NP Hmong
+  - Noto Serif Old Uyghur
+  - Noto Serif Ottoman Siyaq
+  - Noto Serif SC ExtraLight
+  - Noto Serif Sinhala
+  - Noto Serif TC ExtraLight
+  - Noto Serif Tamil
+  - Noto Serif Thai
+  - Noto Serif Tibetan
+  - Noto Serif Todhri
+  - Noto Serif Toto
+  - Noto Serif Vithkuqi
+  - Noto Serif Yezidi
+  - Noto Traditional Nushu
+  - Noto Znamenny Musical Notation
+  - Nova Cut
+  - Nova Oval
+  - Nova Round
+  - Nova Script
+  - Nova Square
+  - NovaMono
+  - Numans
+  - Nunito ExtraLight
+  - Nunito Sans 12pt ExtraLight
+  - Odor Mean Chey
+  - Offside
+  - Oi
+  - Ojuju ExtraLight
+  - Oldenburg
+  - Ole
+  - Oooh Baby
+  - Open Sans Hebrew Condensed
+  - Open Sans Hebrew Condensed Extra Bold
+  - Open Sans Hebrew Light
+  - Oranienbaum
+  - Oregano
+  - Orienta
+  - Oswald
+  - Otomanopee One
+  - Over the Rainbow
+  - Overlock
+  - Overlock Black
+  - Overlock SC
+  - Overpass
+  - Ovo
+  - Oxygen
+  - Oxygen Light
+  - Oxygen Mono
+  - PT Mono
+  - PT Sans Narrow
+  - PT Serif
+  - PT Serif Caption
+  - Pacifico
+  - Padyakke Expanded One
+  - Palanquin Dark
+  - Palanquin Dark Medium
+  - Palanquin Dark SemiBold
+  - Palanquin ExtraLight
+  - Palanquin Medium
+  - Palanquin SemiBold
+  - Palanquin Thin
+  - Palette Mosaic
+  - Pangolin
+  - Paprika
+  - Parisienne
+  - Parkinsans Light
+  - Passero One
+  - Passion One
+  - Passion One Black
+  - Passions Conflict
+  - Pathway Gothic One
+  - Patrick Hand
+  - Patrick Hand SC
+  - Pattaya
+  - Patua One
+  - Pavanam
+  - Peddana
+  - Peralta
+  - Permanent Marker
+  - Petemoss
+  - Petit Formal Script
+  - Petrona
+  - Phetsarath
+  - Philosopher
+  - Phudu Light
+  - Piedra
+  - Pinyon Script
+  - Pixelify Sans
+  - Platypi Light
+  - Playball
+  - Playfair Display SC
+  - Playfair Display SC Black
+  - Playpen Sans
+  - Playpen Sans Hebrew
+  - Playwrite AR
+  - Playwrite AT Guides
+  - Playwrite AU NSW Guides
+  - Playwrite AU TAS
+  - Playwrite AU TAS Guides
+  - Playwrite AU VIC Guides
+  - Playwrite BE VLG
+  - Playwrite BE WAL
+  - Playwrite BE WAL Guides
+  - Playwrite BR
+  - Playwrite BR Guides
+  - Playwrite CA
+  - Playwrite CL Guides
+  - Playwrite CO Guides
+  - Playwrite CU
+  - Playwrite CZ
+  - Playwrite CZ Guides
+  - Playwrite DE LA Guides
+  - Playwrite DE SAS
+  - Playwrite DK Loopet
+  - Playwrite DK Loopet Guides
+  - Playwrite DK Uloopet
+  - Playwrite DK Uloopet Guides
+  - Playwrite ES
+  - Playwrite ES Deco Guides
+  - Playwrite ES Guides
+  - Playwrite FR Moderne Guides
+  - Playwrite FR Trad
+  - Playwrite FR Trad Guides
+  - Playwrite GB J Guides
+  - Playwrite GB S Guides
+  - Playwrite HR
+  - Playwrite HR Lijeva
+  - Playwrite HR Lijeva Guides
+  - Playwrite HU
+  - Playwrite HU Guides
+  - Playwrite ID
+  - Playwrite ID Guides
+  - Playwrite IE
+  - Playwrite IE Guides
+  - Playwrite IN
+  - Playwrite IN Guides
+  - Playwrite IS
+  - Playwrite IT Moderna
+  - Playwrite IT Moderna Guides
+  - Playwrite MX
+  - Playwrite MX Guides
+  - Playwrite NL Guides
+  - Playwrite NO
+  - Playwrite NO Guides
+  - Playwrite NZ Basic
+  - Playwrite NZ Guides
+  - Playwrite PE
+  - Playwrite PE Guides
+  - Playwrite PL Guides
+  - Playwrite PT Guides
+  - Playwrite RO
+  - Playwrite RO Guides
+  - Playwrite SK
+  - Playwrite TZ
+  - Playwrite US Modern
+  - Playwrite US Modern Guides
+  - Playwrite US Trad
+  - Playwrite US Trad Guides
+  - Playwrite VN
+  - Playwrite VN Guides
+  - Playwrite ZA
+  - Playwrite ZA Guides
+  - Pochaevsk
+  - Podkova
+  - Podkova VF Beta
+  - PoetsenOne
+  - Poiret One
+  - Poltawski Nowy
+  - Poly
+  - Pompiere
+  - Ponomar
+  - Poor Story
+  - Poppins
+  - Poppins Black
+  - Poppins ExtraLight
+  - Poppins Light
+  - Poppins Medium
+  - Poppins SemiBold
+  - Poppins Thin
+  - Port Lligat Sans
+  - Port Lligat Slab
+  - Porter Sans Block
+  - Pragati Narrow
+  - Praise
+  - Prata
+  - Preahvihear
+  - Pridi ExtraLight
+  - Pridi Light
+  - Pridi Medium
+  - Princess Sofia
+  - Prompt
+  - Prompt Black
+  - Prompt ExtraBold
+  - Prompt ExtraLight
+  - Prompt Light
+  - Prompt SemiBold
+  - Prompt Thin
+  - Prosto One
+  - Protest Revolution
+  - Protest Riot
+  - Protest Strike
+  - Proza Libre ExtraBold
+  - Proza Libre Medium
+  - Puppies Play
+  - Puritan
+  - Qahiri
+  - Quantico
+  - Quattrocento
+  - Quattrocento Sans
+  - Quicksand Light
+  - Qwigley
+  - Qwitcher Grypen
+  - REM Medium
+  - Racing Sans One
+  - Radio Canada Big
+  - Radley
+  - Rajdhani
+  - Rajdhani Light
+  - Raleway Dots
+  - Raleway Thin
+  - Ramabhadra
+  - Rambla
+  - Rammetto One
+  - Rampart One
+  - Ramsina
+  - Rancho
+  - Rationale
+  - Recursive Sans Linear Light
+  - Red Hat Display
+  - Red Hat Mono
+  - Red Hat Text
+  - Redacted
+  - Redacted Script
+  - Redacted Script Light
+  - Reddit Mono
+  - Reddit Sans
+  - Reddit Sans Condensed
+  - Redressed
+  - Reem Kufi
+  - Reem Kufi Fun
+  - Reem Kufi Ink
+  - Reenie Beanie
+  - Reggae One
+  - Rethink Sans
+  - Revalia
+  - Ribeye
+  - Righteous
+  - Risque
+  - Road Rage
+  - Roboto Condensed
+  - Roboto Flex
+  - Roboto Mono
+  - Roboto Serif 20pt
+  - Roboto Slab
+  - Rochester
+  - Rock 3D
+  - Rock Salt
+  - RocknRoll One
+  - Rokkitt
+  - Rokkitt SemiBold
+  - Romanesco
+  - Ropa Sans
+  - Rouge Script
+  - Rounded Mplus 1c
+  - Rounded Mplus 1c ExtraBold
+  - Rounded Mplus 1c Medium
+  - Rounded Mplus 1c Thin
+  - Rowdies
+  - Rowdies Light
+  - Rozha One
+  - Rubik 80s Fade
+  - Rubik Beastly
+  - Rubik Broken Fax
+  - Rubik Bubbles
+  - Rubik Burned
+  - Rubik Distressed
+  - Rubik Doodle Shadow
+  - Rubik Gemstones
+  - Rubik Glitch
+  - Rubik Glitch Pop
+  - Rubik Lines
+  - Rubik Maps
+  - Rubik Mono One
+  - Rubik Moonrocks
+  - Rubik One
+  - Rubik Pixels
+  - Rubik Puddles
+  - Rubik Storm
+  - Rubik Vinyl
+  - Ruda
+  - Ruluko
+  - Ruslan Display
+  - Russo One
+  - Ruwudu
+  - Ruwudu SemiBold
+  - Rye
+  - SUSE Mono Thin
+  - Sail
+  - Saira Condensed
+  - Saira Condensed ExtraBold
+  - Saira Condensed ExtraLight
+  - Saira Condensed Medium
+  - Saira Condensed SemiBold
+  - Saira ExtraCondensed
+  - Saira ExtraCondensed Black
+  - Saira ExtraCondensed ExCond
+  - Saira ExtraCondensed ExtraBold
+  - Saira ExtraCondensed ExtraLight
+  - Saira ExtraCondensed Medium
+  - Saira ExtraCondensed Thin
+  - Saira SemiCondensed
+  - Saira SemiCondensed Black
+  - Saira SemiCondensed ExtraBold
+  - Saira SemiCondensed ExtraLight
+  - Saira SemiCondensed Medium
+  - Saira SemiCondensed SemiBold
+  - Saira Stencil One
+  - Saira Stencil Thin
+  - Saira Thin
+  - Sanchez
+  - Sancreek
+  - Sankofa Display
+  - Sansation Light
+  - Sansita
+  - Sansita ExtraBold
+  - Sansita One
+  - Sarabun ExtraBold
+  - Sarabun ExtraLight
+  - Sarabun Light
+  - Sarala
+  - Sarina
+  - Sarpanch
+  - Sarpanch ExtraBold
+  - Sarpanch Medium
+  - Sassy Frass
+  - Satisfy
+  - Savate ExtraLight
+  - Sawarabi Gothic
+  - Sawarabi Mincho
+  - Scada
+  - Scheherazade New Medium
+  - Scheherazade New SemiBold
+  - Schoolbell
+  - Science Gothic
+  - Seaweed Script
+  - Sedan SC
+  - Sedgwick Ave
+  - Sekuya
+  - Seymour One
+  - Shadows Into Light
+  - Shadows Into Light Two
+  - Shafarik
+  - Shalimar
+  - Shanti
+  - Share
+  - Share Tech Mono
+  - Shippori Antique
+  - Shippori Antique B1
+  - Shippori Mincho B1
+  - Shippori Mincho B1 ExtraBold
+  - Shippori Mincho B1 SemiBold
+  - Shizuru
+  - Shojumaru
+  - Short Stack
+  - Shrikhand
+  - Sigmar
+  - Sigmar One
+  - Signika Negative Light
+  - Signika Negative SC
+  - Signika Negative SC SemiBold
+  - Silkscreen
+  - Simonetta Black
+  - Single Day
+  - Sintony
+  - SirinStencil
+  - Sirivennela
+  - Six Caps
+  - Sixtyfour Convergence
+  - Slabo 13px
+  - Slabo 27px
+  - Slackey
+  - Slackside One
+  - Smokum
+  - Smooch
+  - Smooch Sans Thin
+  - Sniglet
+  - Snowburst One
+  - Sofadi One
+  - Sofia Sans Condensed
+  - Sofia Sans Extra Condensed
+  - Sofia Sans Semi Condensed
+  - Solway ExtraBold
+  - Solway Light
+  - Sometype Mono
+  - Song Myung
+  - Sono ExtraLight
+  - Sonsie One
+  - Sora
+  - Sorts Mill Goudy
+  - Souliyo Unicode
+  - Sour Gummy Black
+  - Source Code Pro ExtraLight
+  - Source Sans 3 ExtraLight
+  - Source Serif 4
+  - Space Grotesk Light
+  - Special Elite
+  - Special Gothic
+  - Special Gothic Condensed One
+  - Special Gothic Expanded One
+  - Spectral
+  - Spectral ExtraBold
+  - Spectral ExtraLight
+  - Spectral Medium
+  - Spectral SC ExtraBold
+  - Spectral SC ExtraLight
+  - Spectral SC Light
+  - Spectral SC Medium
+  - Spectral SC SemiBold
+  - Spicy Rice
+  - Spinnaker
+  - Spirax
+  - Splash
+  - Spline Sans
+  - Squada One
+  - Square Peg
+  - Staatliches
+  - Stack Sans Headline ExtraLight
+  - Stack Sans Notch ExtraLight
+  - Stack Sans Text ExtraLight
+  - Stalemate
+  - Stalinist One
+  - Stint Ultra Condensed
+  - Stint Ultra Expanded
+  - Stoke
+  - Story Script
+  - Strait
+  - Strichpunkt Sans
+  - Strong
+  - Style Script
+  - Stylish
+  - Sue Ellen Francisco
+  - Sulphur Point
+  - Sunflower
+  - Sunflower Light
+  - Sunflower Medium
+  - Sunshiney
+  - Sura
+  - Suranna
+  - Suravaram
+  - Suwannaphum Black
+  - Suwannaphum Thin
+  - Swanky and Moo Moo
+  - Syne
+  - Syne Mono
+  - Syne Tactile
+  - TASA Orbiter
+  - Tac One
+  - Tagesschrift
+  - Tajawal
+  - Tajawal Black
+  - Tajawal ExtraBold
+  - Tajawal ExtraLight
+  - Tajawal Medium
+  - Tangerine
+  - Tapestry
+  - Taprom
+  - Tauri
+  - Taviraj
+  - Taviraj Black
+  - Taviraj ExtraLight
+  - Taviraj Light
+  - Taviraj Medium
+  - Taviraj SemiBold
+  - Taviraj Thin
+  - Teachers
+  - Teko Light
+  - Tektur
+  - Telex
+  - Tenali Ramakrishna
+  - Tenor Sans
+  - Text Me One
+  - Texturina Medium
+  - Thabit-Bold
+  - Thabit-Oblique
+  - TharLon
+  - The Nautigal
+  - Tienne Black
+  - Tillana ExtraBold
+  - Tilt Neon
+  - Tilt Prism
+  - Tilt Warp
+  - Timmana
+  - Tinos
+  - Tiny5
+  - Tiro Bangla
+  - Tiro Devanagari Hindi
+  - Tiro Devanagari Marathi
+  - Tiro Gurmukhi
+  - Tiro Kannada
+  - Tiro Telugu
+  - Tirra
+  - Tirra Black
+  - Tirra ExtraBold
+  - Tirra Medium
+  - Tirra SemiBold
+  - Titan One
+  - Titillium Web Black
+  - Titillium Web ExtraLight
+  - Titillium Web Light
+  - Titillium Web SemiBold
+  - Tomorrow Black
+  - Tomorrow ExtraBold
+  - Tomorrow ExtraLight
+  - Tomorrow Medium
+  - Tomorrow SemiBold
+  - Tomorrow Thin
+  - Tourney Thin
+  - Train One
+  - Triodion
+  - Trirong ExtraLight
+  - Trirong Light
+  - Trirong Medium
+  - Trirong SemiBold
+  - Trirong Thin
+  - Trispace Thin
+  - Trochut
+  - Truculenta
+  - Trykker
+  - Tsukimi Rounded
+  - Tsukimi Rounded Light
+  - Tsukimi Rounded Medium
+  - Tsukimi Rounded SemiBold
+  - Tulpen One
+  - Turret Road ExtraBold
+  - Turret Road ExtraLight
+  - Turret Road Light
+  - Turret Road Medium
+  - Twinkle Star
+  - Uchen
+  - Unbounded
+  - Uncial Antiqua
+  - Underdog
+  - Unica One
+  - UnifrakturCook
+  - UnifrakturMaguntia
+  - Unkempt
+  - Unna
+  - VT323
+  - Vampiro One
+  - Varela
+  - Vast Shadow
+  - Vazirmatn
+  - Vend Sans Light
+  - Vesper Libre
+  - Vesper Libre Heavy
+  - Vesper Libre Medium
+  - Viaoda Libre
+  - Vibes
+  - Vibur
+  - Vidaloka
+  - Viga
+  - Voces
+  - Volkhov
+  - Vollkorn
+  - Vollkorn SC
+  - Vollkorn SC Black
+  - Vollkorn SC SemiBold
+  - Vujahday Script
+  - WDXL Lubrifont JP N
+  - WDXL Lubrifont SC
+  - WDXL Lubrifont TC
+  - Waiting for the Sunrise
+  - Wallpoet
+  - Water Brush
+  - Waterfall
+  - Wellfleet
+  - Whisper
+  - Winky Sans
+  - Wire One
+  - Wix Madefor Display
+  - Wix Madefor Text
+  - Wix Madefor Text Medium
+  - Wix Madefor Text SemiBold
+  - Work Sans
+  - Workbench
+  - Xanh Mono
+  - Yaldevi Colombo
+  - Yaldevi Colombo ExtraLight
+  - Yaldevi Colombo Light
+  - Yaldevi Colombo Medium
+  - Yaldevi Colombo SemiBold
+  - Yaldevi ExtraLight
+  - Yanone Kaffeesatz ExtraLight
+  - Yantramanav
+  - Yantramanav Black
+  - Yantramanav Light
+  - Yantramanav Medium
+  - Yantramanav Thin
+  - Yarndings 12
+  - Yarndings 20
+  - Yarndings 20 Charted
+  - Yatra One
+  - Yellowtail
+  - Yeon Sung
+  - Yeseva One
+  - Yesteryear
+  - Yinmar
+  - Yomogi
+  - Young Serif
+  - Yrsa
+  - Ysabeau
+  - Ysabeau Infant
+  - Ysabeau Office
+  - Yuji Boku
+  - Yuji Hentaigana Akari
+  - Yuji Hentaigana Akebono
+  - Yuji Mai
+  - Yuji Syuku
+  - ZCOOL KuaiLe
+  - ZCOOL QingKe HuangYou
+  - ZCOOL XiaoWei
+  - Zain
+  - Zain Black
+  - Zain ExtraBold
+  - Zain ExtraLight
+  - Zain Light
+  - Zalando Sans
+  - Zalando Sans Expanded
+  - Zalando Sans SemiExpanded
+  - Zen Antique Soft
+  - Zen Dots
+  - Zen Kaku Gothic Antique
+  - Zen Kaku Gothic Antique Medium
+  - Zen Kaku Gothic New Black
+  - Zen Kaku Gothic New Light
+  - Zen Kaku Gothic New Medium
+  - Zen Kurenaido
+  - Zen Loop
+  - Zen Maru Gothic
+  - Zen Maru Gothic Light
+  - Zen Maru Gothic Medium
+  - Zen Old Mincho
+  - Zen Old Mincho Black
+  - Zen Old Mincho Medium
+  - Zen Tokyo Zoo
+  - Zeyada
+  - Zilla Slab Highlight
+  - Zilla Slab Light
+  - Zilla Slab Medium
+  - Zilla Slab SemiBold
+  - jsMath-cmr10
+  - jsMath-cmsy10
+  - jsMath-cmti10
+  val:
+  - Acme
+  - Akatab Medium
+  - Akshar Light
+  - Akt
+  - Alegreya Sans ExtraBold
+  - Alegreya Sans SC ExtraBold
+  - Alegreya Sans SC Medium
+  - Alexandria
+  - Alkatra
+  - Allkin
+  - Almarai Light
+  - Alumni Sans Inline One
+  - Alumni Sans SC Thin
+  - Amaranth
+  - Anek Malayalam Medium
+  - Anta
+  - Anybody Thin
+  - Arapey
+  - Armata
+  - Asap
+  - Asap Condensed Condensed Black
+  - Asap Condensed Condensed ExtraLight
+  - Asap Condensed Light
+  - Atkinson Hyperlegible Next
+  - Averia Sans Libre Light
+  - B612 Mono
+  - BIZ UDPGothic
+  - BJCree SemiBold
+  - Bahianita
+  - Bai Jamjuree ExtraLight
+  - Bai Jamjuree Medium
+  - Bai Jamjuree SemiBold
+  - Bakbak One
+  - Basic
+  - Baskervville SC
+  - Battambang Black
+  - Be Vietnam Pro Light
+  - Be Vietnam Pro Medium
+  - Be Vietnam Pro SemiBold
+  - Be Vietnam Pro Thin
+  - BenchNine
+  - Betania Patmos GuideLine
+  - Bevan
+  - Big Shoulders Display SC Thin
+  - Big Shoulders Display Thin
+  - Big Shoulders Inline Text SC Thin
+  - Bigelow Rules
+  - Bilbo Swash Caps
+  - Bitcount Single
+  - Bitcount Single Ink
+  - Black Han Sans
+  - Blaka Hollow
+  - Blinker Light
+  - Blinker Thin
+  - Bodoni Moda SC
+  - Boldonse
+  - Bricolage Grotesque 96pt ExtraBold
+  - Brygada 1918
+  - Bungee Hairline
+  - Bungee Shade
+  - Bytesized
+  - Cairo
+  - Caprasimo
+  - Caveat Brush
+  - Chilanka
+  - Chonburi
+  - Cinzel
+  - Coda
+  - Comforter
+  - Comic Neue Light
+  - Comme
+  - Copse
+  - Cormorant Unicase
+  - Creepster Caps
+  - Crimson Text SemiBold
+  - Cutive Mono
+  - Dai Banna SIL
+  - Darker Grotesque Light
+  - Digital Numbers
+  - Diplomata
+  - Doppio One
+  - DotumChe
+  - Dynalight
+  - Elsie Black
+  - Encode Sans Expanded ExtraLight
+  - Encode Sans Expanded Light
+  - Encode Sans SC Condensed Thin
+  - Encode Sans Semi Expanded
+  - Encode Sans Semi Expanded Light
+  - Encode Sans Semi Expanded Medium
+  - Encode Sans Semi Expanded Thin
+  - Ephesis
+  - Exo 2
+  - Expletus Sans
+  - Farro Medium
+  - Farsan
+  - Faustina Light
+  - Federant
+  - Felipa
+  - Fira Sans Black
+  - Fira Sans Extra Condensed ExtraLight
+  - Fira Sans Medium
+  - Fira Sans Thin
+  - Fjord
+  - Fontdiner Swanky
+  - Frank Ruhl Libre
+  - Freeman
+  - Funnel Sans Light
+  - Fustat
+  - Galindo
+  - Gamja Flower
+  - Gentium Plus
+  - Germania One
+  - Glory Thin
+  - Gorditas
+  - Gothic A1
+  - Gothic A1 Black
+  - Gothic A1 ExtraBold
+  - Gothic A1 ExtraLight
+  - Gothic A1 Medium
+  - Gotu
+  - Gowun Dodum
+  - Graduate
+  - Grandiflora One
+  - Grandstander Thin
+  - Gurajada
+  - Habibi
+  - Harmattan
+  - Herr Von Muellerhoff
+  - Hind Colombo SemiBold
+  - Hind Jalandhar Medium
+  - Hind Madurai
+  - Hind Madurai Light
+  - Hind Madurai Medium
+  - Host Grotesk Light
+  - Hurricane
+  - IBM Plex Sans Devanagari ExtraLight
+  - IBM Plex Sans Devanagari SemiBold
+  - IBM Plex Sans Hebrew
+  - IBM Plex Sans Hebrew Thin
+  - IBM Plex Sans JP ExtraLight
+  - IBM Plex Sans KR ExtraLight
+  - IBM Plex Sans KR Thin
+  - IBM Plex Sans Thai
+  - IBM Plex Sans Thai ExtraLight
+  - IBM Plex Serif ExtraLight
+  - IBM Plex Serif Light
+  - IM FELL Great Primer SC
+  - Imbue Thin
+  - Inconsolata
+  - Inconsolata Condensed Light
+  - Inconsolata Expanded ExtraBold
+  - Inconsolata Expanded Medium
+  - Inconsolata ExtraCondensed Bold
+  - Inconsolata ExtraCondensed Light
+  - Inconsolata ExtraExpanded
+  - Inconsolata ExtraExpanded ExtraBold
+  - Inconsolata Light
+  - Inconsolata SemiCondensed Light
+  - Inconsolata SemiCondensed Medium
+  - Inconsolata SemiExpanded Light
+  - Inconsolata UltraCondensed
+  - Inconsolata UltraCondensed ExtraLight
+  - Inconsolata UltraCondensed Light
+  - Inconsolata UltraCondensed Medium
+  - Inknut Antiqua Black
+  - Inspiration
+  - Intel One Mono
+  - Intel One Mono Light
+  - Itim
+  - Jersey 10 Charted
+  - Jersey 15 Charted
+  - Jersey 20
+  - Jersey 20 Charted
+  - Jomhuria
+  - Joti One
+  - Judson
+  - Just Me Again Down Here
+  - K2D Medium
+  - K2D SemiBold
+  - Kaisei Decol
+  - Kaisei HarunoUmi Medium
+  - Kalam
+  - Kalnia Thin
+  - Kanit Light
+  - Kanit SemiBold
+  - Karma
+  - Kedebideri Black
+  - Kedebideri SemiBold
+  - Khand Medium
+  - Kirang Haerang
+  - Klee One
+  - Kodchasan Medium
+  - Kode Mono
+  - Koh Santepheap Light
+  - Koulen
+  - Kristi
+  - Krub
+  - Kumbh Sans
+  - Kurale
+  - LXGW WenKai TC Light
+  - La Belle Aurore
+  - Lateef
+  - Lato
+  - Leckerli One
+  - Lemon
+  - Lexend
+  - Libertinus Keyboard
+  - Libre Caslon Text
+  - Life Savers ExtraBold
+  - Lilex
+  - Lisu Bosa Medium
+  - Liu Jian Mao Cao
+  - Livvic Medium
+  - Londrina Shadow
+  - Loved by the King
+  - Lustria
+  - M PLUS 1p Medium
+  - M PLUS 2 Thin
+  - M PLUS Code Latin
+  - M PLUS U Thin
+  - Macondo
+  - Mandali
+  - Marko One
+  - Martel Heavy
+  - Martel Sans
+  - Martel Sans Black
+  - Martian Mono SemiExpanded
+  - Maven Pro VF Beta
+  - Medula One
+  - Merge One
+  - Milonga
+  - Mina
+  - Moirai One
+  - Momo Trust Sans
+  - Monomaniac One
+  - Montserrat Alternates
+  - Mooli
+  - Mountains of Christmas
+  - Mouse Memoirs
+  - Mozilla Text ExtraLight
+  - Mr De Haviland
+  - Mukta ExtraLight
+  - Mukta Malar
+  - Mukta Malar Light
+  - Mukta Vaani Light
+  - Mukta Vaani Medium
+  - Myanmar Sans Pro
+  - Mynerve
+  - NTR
+  - Nanum Pen
+  - NanumMyeongjo
+  - Nata Sans
+  - Nixie One
+  - Noto Emoji
+  - Noto Rashi Hebrew
+  - Noto Sans Brahmi
+  - Noto Sans Buginese
+  - Noto Sans Chakma
+  - Noto Sans Chorasmian
+  - Noto Sans Cypro Minoan
+  - Noto Sans Devanagari UI
+  - Noto Sans Egyptian Hieroglyphs
+  - Noto Sans Gujarati UI ExtraLight
+  - Noto Sans HK Thin
+  - Noto Sans Kawi
+  - Noto Sans Lisu
+  - Noto Sans Lycian
+  - Noto Sans Medefaidrin
+  - Noto Sans Meroitic
+  - Noto Sans Mono
+  - Noto Sans Multani
+  - Noto Sans Myanmar UI SemiBold
+  - Noto Sans Nabataean
+  - Noto Sans Old Persian
+  - Noto Sans SignWriting
+  - Noto Sans Sinhala
+  - Noto Sans Sundanese
+  - Noto Sans Tagbanwa
+  - Noto Sans Tai Tham
+  - Noto Sans Tai Viet
+  - Noto Sans Telugu UI
+  - Noto Sans Tirhuta
+  - Noto Sans Wancho
+  - Noto Sans Zanabazar Square
+  - Noto Serif Balinese
+  - Noto Serif JP ExtraLight
+  - Noto Serif Oriya
+  - Noto Serif Tangut
+  - Noto Serif Telugu
+  - Nova Flat
+  - Nova Slim
+  - Nuosu SIL
+  - OFL Sorts Mill Goudy TT
+  - Odibee Sans
+  - Old Standard TT
+  - Oleo Script
+  - Oleo Script Swash Caps
+  - Open Sans
+  - Open Sans Hebrew
+  - Orelega One
+  - Overpass Mono Light
+  - Oxanium ExtraLight
+  - PT Sans
+  - PT Sans Caption
+  - Palanquin
+  - Parastoo
+  - Pathway Extreme 8pt Thin
+  - Paytone One
+  - Pirata One
+  - Plaster
+  - Playfair 5pt SemiExpanded Light
+  - Playfair Display
+  - Playpen Sans Arabic
+  - Playpen Sans Deva
+  - Playwrite AU NSW
+  - Playwrite AU QLD
+  - Playwrite AU QLD Guides
+  - Playwrite AU SA
+  - Playwrite CA Guides
+  - Playwrite CL
+  - Playwrite CO
+  - Playwrite DE LA
+  - Playwrite DE VA Guides
+  - Playwrite ES Deco
+  - Playwrite FR Moderne
+  - Playwrite GB J
+  - Playwrite HR Guides
+  - Playwrite IT Trad Guides
+  - Playwrite NG Modern Guides
+  - Playwrite NL
+  - Playwrite NZ
+  - Playwrite NZ Basic Guides
+  - Playwrite PL
+  - Playwrite PT
+  - Poller One
+  - Potta One
+  - Pridi SemiBold
+  - Proza Libre
+  - Public Sans Thin
+  - Quando
+  - Questrial
+  - Rajdhani SemiBold
+  - Ranchers
+  - Ranga
+  - Rasa
+  - Ravi Prakash
+  - Readex Pro
+  - Red Rose
+  - Ribeye Marrow
+  - Rosario
+  - Rounded Mplus 1c Black
+  - Rounded Mplus 1c Light
+  - Rubik Doodle Triangles
+  - Rubik Light
+  - Rubik Marker Hatch
+  - Rubik Scribble
+  - Ruge Boogie
+  - Rum Raisin
+  - Ruthie
+  - Ruwudu Medium
+  - STIX Two Math
+  - SUSE Thin
+  - Sacramento
+  - Saira ExtraCondensed Light
+  - Saira ExtraCondensed SemiBold
+  - Saira SemiCondensed SemiCond
+  - Sansation
+  - Sansita Black
+  - Sarabun SemiBold
+  - Sarpanch Black
+  - Sarpanch SemiBold
+  - Schibsted Grotesk
+  - Scope One
+  - Shantell Sans Light
+  - Shippori Mincho
+  - Shippori Mincho B1 Medium
+  - Shippori Mincho Medium
+  - Siemreap
+  - Sixtyfour
+  - Skranji
+  - Snippet
+  - Sofia
+  - Sofia Sans
+  - Solitreo
+  - Space Mono
+  - Spectral SC
+  - Stardos Stencil
+  - Stick
+  - Suez One
+  - Sumana
+  - Suwannaphum Light
+  - Syncopate
+  - TASA Explorer
+  - Taviraj ExtraBold
+  - Thabit-Bold-Oblique
+  - The Girl Next Door
+  - TikTok Sans Light
+  - Tillana
+  - Titillium Web
+  - Tomorrow
+  - Trade Winds
+  - Trirong Black
+  - Tuffy
+  - Turret Road
+  - UoqMunThenKhung
+  - Updock
+  - Urbanist
+  - Warnes
+  - Wavefont Thin
+  - Winky Rough
+  - Yarndings 12 Charted
+  - Ysabeau SC
+  - Zen Antique
+  - Zen Kaku Gothic Antique Black
+  - Zen Old Mincho SemiBold
+  - Zhi Mang Xing
+  - jsMath-cmbx10
+  - jsMath-cmmi10
+  test:
+  - ADLaM Display
+  - Abhaya Libre ExtraBold
+  - Abhaya Libre SemiBold
+  - Aclonica
+  - Advent Pro
+  - Agbalumo
+  - Akatab
+  - Akaya Telivigala
+  - Aksara Bali Galang
+  - Alegreya SC
+  - Alegreya Sans Thin
+  - Allison
+  - Allura
+  - Almarai
+  - Alumni Sans Collegiate One SC
+  - Alumni Sans Thin
+  - Anaheim
+  - Andika
+  - Annie Use Your Telescope
+  - Antic
+  - Anton
+  - Aref Ruqaa Ink
+  - Asap Condensed
+  - Asset
+  - Atma
+  - Averia Libre Light
+  - Averia Sans Libre
+  - BJCree
+  - BM HANNA
+  - Bai Jamjuree Light
+  - Baloo 2
+  - Baloo Bhaina 2
+  - Baloo Da 2
+  - Balsamiq Sans
+  - Balthazar
+  - Barlow Condensed Thin
+  - Barlow Semi Condensed
+  - Barlow Semi Condensed ExtraBold
+  - Barlow Semi Condensed Thin
+  - Barlow SemiBold
+  - Barriecito
+  - Battambang Light
+  - Battambang Thin
+  - Baumans
+  - Beau Rivage
+  - Bebas Neue
+  - Belanosima
+  - BenchNine Light
+  - Benne
+  - BhuTuka Expanded One
+  - Big Shoulders Inline Display Thin
+  - Big Shoulders Inline Thin
+  - Big Shoulders Stencil Thin
+  - Big Shoulders Text SC Thin
+  - Bigshot One
+  - Birthstone
+  - Bitcount Prop Single Ink
+  - Black Ops One
+  - Bodoni Moda
+  - Bpmf Iansui
+  - Bruno Ace
+  - Bubbler One
+  - Butterfly Kids
+  - Cabin
+  - Cabin Sketch
+  - Caramel
+  - Cardo
+  - Cascadia Mono
+  - Chakra Petch
+  - Changa One
+  - Chango
+  - Chathura ExtraBold
+  - Chathura Thin
+  - Chivo Medium
+  - Codystar
+  - Combo
+  - Comic Relief
+  - Coming Soon
+  - Concert One
+  - Condiment
+  - Coral Pixels
+  - Cormorant SC Light
+  - Cormorant Upright Medium
+  - Cossette Texte
+  - Courgette
+  - Courier Prime
+  - Croissant One
+  - Cuprum
+  - DM Mono Medium
+  - Dai Banna SIL Light
+  - Dai Banna SIL SemiBold
+  - Dangrek
+  - Dawning of a New Day
+  - Dhurjati
+  - Diplomata SC
+  - DotGothic16
+  - Dotum
+  - Duru Sans
+  - EB Garamond
+  - Eczar
+  - Edu QLD Beginner
+  - Electrolize
+  - Elsie Swash Caps Black
+  - Encode Sans Condensed Thin
+  - Encode Sans Expanded ExtraBold
+  - Encode Sans Semi Condensed Black
+  - Engagement
+  - Englebert
+  - Epunda Slab Light
+  - Esteban
+  - Fanwood Text
+  - Fauna One
+  - Figtree Light
+  - Fira Mono
+  - Fira Sans
+  - Fira Sans Condensed
+  - Fira Sans Extra Condensed Medium
+  - Fira Sans ExtraBold
+  - Fira Sans Light
+  - Flamenco Light
+  - Forum
+  - Fredericka the Great
+  - Funnel Display Light
+  - Geist Mono
+  - Genos Thin
+  - Gidole
+  - Gidugu
+  - Gilda Display
+  - Girassol
+  - Glass Antiqua
+  - Gloock
+  - Goldman
+  - Gothic A1 SemiBold
+  - Gothic A1 Thin
+  - Great Vibes
+  - Grechen Fuemen
+  - Grenze Gotisch
+  - Grey Qo
+  - Gruppo
+  - Gugi
+  - Gveret Levin
+  - Halant Medium
+  - Handlee
+  - Hanken Grotesk
+  - Heebo
+  - Hind Colombo Medium
+  - Hind Jalandhar
+  - Hind Mysuru SemiBold
+  - Hind Vadodara Medium
+  - Homenaje
+  - IBM Plex Mono SemiBold
+  - IBM Plex Sans Condensed Medium
+  - IBM Plex Sans Devanagari Medium
+  - IBM Plex Sans Devanagari Thin
+  - IBM Plex Sans Hebrew ExtraLight
+  - IM FELL Great Primer
+  - Iceland
+  - Inconsolata ExtraCondensed
+  - Inconsolata ExtraCondensed Black
+  - Inconsolata SemiCondensed Black
+  - Inconsolata SemiCondensed Bold
+  - Inconsolata SemiExpanded
+  - Inconsolata SemiExpanded ExtraBold
+  - Inconsolata SemiExpanded Medium
+  - Inconsolata UltraExpanded
+  - Inconsolata UltraExpanded ExtraBold
+  - Inika
+  - Inknut Antiqua
+  - Inria Sans
+  - Instrument Serif
+  - Iosevka Charon Medium
+  - Jacquarda Bastarda 9
+  - Jacques Francois Shadow
+  - Jolly Lodger
+  - Jua
+  - Julius Sans One
+  - K2D Light
+  - Kaisei Decol Medium
+  - Kaisei Opti Medium
+  - Kaisei Tokumin
+  - Kalnia Glaze Thin
+  - Kanit Black
+  - Karantina Light
+  - Karla
+  - Katibeh
+  - Kaushan Script
+  - Kay Pho Du SemiBold
+  - Kdam Thmor Pro
+  - Khmer
+  - Khula ExtraBold
+  - Kiwi Maru
+  - Kiwi Maru Medium
+  - Kodchasan Light
+  - Koh Santepheap
+  - Kolker Brush
+  - Krona One
+  - Krub Light
+  - Krub SemiBold
+  - Kulim Park ExtraLight
+  - Kulim Park Light
+  - Lacquer
+  - Lancelot
+  - Lateef ExtraLight
+  - Lexend Deca
+  - Lexend Peta
+  - Libertinus Math
+  - Libertinus Mono
+  - Libre Barcode 128
+  - Libre Bodoni
+  - Licorice
+  - Limelight
+  - Lobster
+  - Lobster Two
+  - Lohit Devanagari
+  - Londrina Outline
+  - Londrina Solid Thin
+  - Love Ya Like A Sister
+  - Luxurious Roman
+  - M PLUS 1p Black
+  - Major Mono Display
+  - Mako
+  - Maname
+  - Marcellus SC
+  - Matangi Light
+  - Meie Script
+  - Metrophobic
+  - Miranda Sans
+  - Mirza Medium
+  - Miss Fajardose
+  - Mitr
+  - Mitr ExtraLight
+  - Mochiy Pop One
+  - Modak
+  - Moderustic
+  - Momo Trust Display
+  - Monomakh
+  - Montez
+  - Montserrat Alternates Light
+  - Moul
+  - Mrs Saint Delafield
+  - Mukta ExtraBold
+  - Mukta Vaani
+  - Mukta Vaani ExtraLight
+  - MuseoModerno Thin
+  - NanumGothic
+  - National Park
+  - Neuton
+  - Neuton Light
+  - New Rocker
+  - Niramit
+  - Niramit ExtraLight
+  - Nosifer
+  - Noto Music
+  - Noto Sans Arabic UI
+  - Noto Sans Armenian
+  - Noto Sans Buhid
+  - Noto Sans Canadian Aboriginal
+  - Noto Sans Caucasian Albanian
+  - Noto Sans Cuneiform
+  - Noto Sans Devanagari
+  - Noto Sans Devanagari UI ExtraLight
+  - Noto Sans Devanagari UI Medium
+  - Noto Sans Display
+  - Noto Sans Elbasan
+  - Noto Sans Gujarati UI Black
+  - Noto Sans Gunjala Gondi
+  - Noto Sans Hebrew Thin
+  - Noto Sans Kannada
+  - Noto Sans Kharoshthi
+  - Noto Sans Khudawadi
+  - Noto Sans Masaram Gondi
+  - Noto Sans Miao
+  - Noto Sans Mro
+  - Noto Sans NKo Unjoined
+  - Noto Sans Nag Mundari
+  - Noto Sans Newa
+  - Noto Sans Oriya UI
+  - Noto Sans Palmyrene
+  - Noto Sans Phoenician
+  - Noto Sans Rejang
+  - Noto Sans Sinhala UI
+  - Noto Sans Sora Sompeng
+  - Noto Sans Soyombo
+  - Noto Serif Devanagari
+  - Noto Serif Display
+  - Noto Serif Georgian
+  - Noto Serif HK ExtraLight
+  - Noto Serif Khitan Small Script
+  - Noto Serif Myanmar Blk
+  - Onest
+  - Open Sans Hebrew Condensed Light
+  - Open Sans Hebrew Extra Bold
+  - Orbit
+  - Orbitron
+  - Original Surfer
+  - Outfit Thin
+  - Padauk
+  - Palanquin Light
+  - Piazzolla Thin
+  - Piazzolla Thin Italic
+  - Play
+  - Playpen Sans Thai
+  - Playwrite AR Guides
+  - Playwrite AT
+  - Playwrite AU SA Guides
+  - Playwrite AU VIC
+  - Playwrite BE VLG Guides
+  - Playwrite CU Guides
+  - Playwrite DE Grund
+  - Playwrite DE Grund Guides
+  - Playwrite DE SAS Guides
+  - Playwrite DE VA
+  - Playwrite GB S
+  - Playwrite IS Guides
+  - Playwrite IT Trad
+  - Playwrite NG Modern
+  - Playwrite SK Guides
+  - Playwrite TZ Guides
+  - Plus Jakarta Sans
+  - Ponnala
+  - Pontano Sans
+  - Poppins ExtraBold
+  - Press Start 2P
+  - Pridi
+  - Prociono
+  - Prompt Medium
+  - Protest Guerrilla
+  - Proza Libre SemiBold
+  - Purple Purse
+  - Quintessential
+  - Radio Canada
+  - Rajdhani Medium
+  - Rakkas
+  - Ramaraja
+  - Rhodium Libre
+  - Roboto
+  - Rosarivo
+  - Rounded Mplus 1c Bold
+  - Rubik Dirt
+  - Rubik Iso
+  - Rubik Maze
+  - Rubik Microbe
+  - Rubik Spray Paint
+  - Rubik Wet Paint
+  - Rufina
+  - SN Pro ExtraLight
+  - STIX Two Text
+  - Sahitya
+  - Saira Condensed Black
+  - Saira Condensed Condensed
+  - Saira Condensed Light
+  - Saira Condensed Thin
+  - Saira SemiCondensed Light
+  - Saira SemiCondensed Thin
+  - Salsa
+  - Sansita Swashed Light
+  - Sarabun
+  - Sarabun Medium
+  - Sarabun Thin
+  - Scheherazade New
+  - Secular One
+  - Sedan
+  - Sedgwick Ave Display
+  - Sen
+  - Send Flowers
+  - Sevillana
+  - Share Tech
+  - Shippori Mincho ExtraBold
+  - Shippori Mincho SemiBold
+  - Signika Light
+  - Signika Negative SC Light
+  - Signika SC
+  - Simonetta
+  - Sitara
+  - Smythe
+  - Solway
+  - Solway Medium
+  - Spectral Light
+  - Spectral SemiBold
+  - Spline Sans Mono
+  - Sree Krushnadevaraya
+  - Sriracha
+  - Srisakdi
+  - Stick No Bills ExtraLight
+  - Sulphur Point Light
+  - Supermercado
+  - Suwannaphum
+  - Tai Heritage Pro
+  - Tajawal Light
+  - Thabit
+  - Thasadith
+  - Tienne
+  - Tillana Medium
+  - Tillana SemiBold
+  - Tiro Devanagari Sanskrit
+  - Tiro Tamil
+  - Tomorrow Light
+  - Trirong
+  - Trirong ExtraBold
+  - Trocchi
+  - Ultra
+  - Unlock
+  - Varela Round
+  - Varta Light
+  - Victor Mono Thin
+  - Vina Sans
+  - Voltaire
+  - Walter Turncoat
+  - Wendy One
+  - WindSong
+  - WindSong Medium
+  - Wittgenstein
+  - Wix Madefor Text ExtraBold
+  - Yusei Magic
+  - Zen Kaku Gothic Antique Light
+  - Zen Kaku Gothic New
+  - Zen Maru Gothic Black
+  - Zilla Slab
+  - jsMath-cmex10

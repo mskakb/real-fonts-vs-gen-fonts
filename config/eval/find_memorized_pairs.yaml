@@ -1,0 +1,15 @@
+# 生成画像の記憶（memorization）検証: 各生成画像に最も近い実フォント画像を探す
+# （find_memorized_pairs.py）。設定の真実はこの YAML。
+# run_find_memorized_pairs.sh は --config でこれを渡す薄いラッパー。
+
+real_dir: "data/datasets/font2dataset_google_uppercase_96_sdf"
+gen_dir: "results/2026-06-17-16-48_diffusion_uppercase_sdf/checkpoints/last-ema"
+output_dir: "results/2026-06-17-16-48_diffusion_uppercase_sdf/checkpoints/last-ema/memorization"
+
+charset: "uppercase"
+image_size: 96
+batch_size: 64
+num_workers: 4
+split_file: "config/splits/split_ascii_seed42.yaml"  # null で "all" 扱い
+top_k: 64                       # LPIPS を計算する MSE 最小ペアの件数
+real_block: 512                 # cdist のブロックサイズ（実フォント側次元、メモリ上限調整用）

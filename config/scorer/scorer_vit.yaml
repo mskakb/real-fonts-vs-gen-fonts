@@ -1,0 +1,79 @@
+experiment_name: "scorer_uppercase"   # setup_experiment_dir が日時接頭辞を自動付与
+comment: "vit_small_p8"              # 実験メモ。非空なら experiment_name に _{comment} を付加
+output_root: "models"
+
+# ViT 構成: vit_small_p8 (patch=8, image_size=96 -> 12x12=144 トークン) + 線形ヘッド +
+# RankNet ranking + 軽量augmentation + charset="uppercase"。scorer_basic.yaml
+# (ResNet50 + 線形ヘッド) と backbone 以外の条件（解像度・SDF decode・split・augmentation・
+# ヘッド構成）を揃えたベースライン。patch_size=8 は analyze_occlusion.py の
+# --patch 8 --stride 8 と幾何が一致し、attention と occlusion のパッチ単位比較を可能にする
+# ための選択（CLAUDE.md「Scorer の backbone 選択」節参照）。
+
+data:
+  real_data_dir: "data/datasets/font2dataset_google_uppercase_96_sdf"
+  gen_data_dir: "results/2026-06-17-16-48_diffusion_uppercase_sdf/checkpoints/last-ema"
+  mode: "ranking"                  # "ranking" | "scorer"（分類）
+  pair_sampling: "random"          # "random" | "same_char" | "in_batch_hard"
+  charset: "uppercase"             # 拡散モデルの学習時と合わせる
+  split_file: "config/splits/split_ascii_seed42.yaml"  # null で動的計算
+  gen_split_file: "results/2026-06-17-16-48_diffusion_uppercase_sdf/checkpoints/last-ema/gen_split_seed42.yaml"  # null でランダム分割
+  binarize_threshold: null          # 学習データの前処理のみ。誘導サンプリング時は非適用
+  use_sdf: true        # true で real/gen 両方を SDF 表現で扱う（real/gen とも sdf/ 済み）
+  sdf_source: auto      # auto（sdf/ あれば precomputed・無ければ計算）| precomputed | compute
+  sdf_max_dist: 15.0    # real/gen データセットの生成時 max_dist (15.0, 96px) に揃える
+  sdf_decode: hard      # null=raw SDF を入力 / "hard"|"sigmoid"|"smoothstep" でグレースケール decode
+  sdf_sharpness: null   # sdf_decode="sigmoid" のときの sharpness
+  sdf_filter_width_px: 1.5  # sdf_decode="smoothstep" の遷移帯の半幅(px)
+  aug_scale: null                  # スケール augmentation なし
+  aug_translate: [0.1, 0.1]       # 軽量平行移動（過学習抑制）
+  image_size: 96                   # ViT backbone に注入される（patch_size=8 で割り切れる必要あり）
+  batch_size: 96
+  val_split: 0.15
+  test_split: 0.15
+  num_workers: 4
+  seed: 42
+
+model:
+  ranking: true                    # false で分類モード（BCE）
+  pair_sampling: "random"          # data.pair_sampling と同じ値を指定
+  backbone: vit_small_p8           # vit_backbone.VIT_SPECS のキー（patch=8, depth=8, dim=384）
+  pretrained: false                # ViT は常にスクラッチ学習（pretrained は無視される）
+  dropout: 0.3                     # hidden_dim=null のため未使用
+  hidden_dim: null                 # ベーシック構成と同条件: 1層線形ヘッド (Linear(feature_dim, 1))
+  label_smoothing: 0.0             # 分類モード (ranking=false) のみ使用
+  tie_weight_real: 0.0             # ベーシック構成と同条件: tie-rankingなし
+  tie_weight_gen: 0.0
+  no_decay_norm_bias: true         # ViT スクラッチ学習の標準レシピ: norm/bias/class_token/pos_embedding は weight decay 0
+  # optimizer / scheduler
+  lr: 3.0e-4                       # スクラッチ ViT 向け（ResNet より高め）
+  backbone_lr_scale: 1.0
+  weight_decay: 0.05               # ViT スクラッチ学習の標準的な weight decay
+  lr_warmup_steps: 2000            # ViT は warmup を長めに取る
+  freeze_backbone_steps: 0
+  # lr_total_steps は trainer.max_steps から自動設定される (train_scorer.py 参照)
+  # ---- LR scheduler ----
+  scheduler: cosine        # warmup（LinearLR）→ CosineAnnealing
+  plateau_factor: 0.5      # scheduler=cosine のため未使用（他 config との差分を減らすため残置）
+  plateau_patience: 100
+  plateau_threshold: 1.0e-4
+  plateau_min_lr: 1.0e-6
+  plateau_cooldown: 10
+  plateau_monitor: "val/loss"
+  plateau_mode: "min"
+  # ---- EMA ----
+  ema_decay: 0.999                 # EMA 平滑化係数。Scorer は学習が速いため diffusion (0.9999) より短め
+  ema_start_step: 0                # EMA 更新を開始するグローバルステップ
+
+trainer:
+  max_steps: 200000
+  val_check_interval: 100             # float=エポック単位（int にするとステップ数指定）
+  log_every_n_steps: 50
+  precision: "16-mixed"
+  gradient_clip_val: 1.0
+  save_every_n_steps: 10000           # 0 で無効。N ステップごとに periodic_step*.ckpt を保存
+  save_periodic_top_k: 1             # -1 で全件保存。N > 0 で直近 N 件のみ保持
+  early_stopping:
+    patience: 0                       # 0 で無効。改善なしを許容するバリデーション回数
+    monitor: "val/loss"              # 監視するメトリクス
+    mode: "min"                       # "min" (loss系) / "max" (accuracy系)
+    min_delta: 0.0                    # 改善とみなす最小変化量

@@ -1,0 +1,104 @@
+experiment_name: "diffusion_H"          # setup_experiment_dir が日時接頭辞を自動付与
+comment: ""                         # 実験メモ。非空なら experiment_name に _{comment} を付加
+output_root: "models"
+
+data:
+  real_data_dir: "data/datasets/font2dataset_google_uppercase_64_sdf"
+  charset: "H"             # 使用文字セット: "uppercase"(26) / "A"(1クラス) / "AB"(2クラス) など
+  split_file: "config/splits/split_ascii_seed42.yaml"                 # make_split.py が生成した split.yaml のパス。null で動的計算
+  binarize_threshold: null          # 画像の二値化しきい値。null で無効（フォントは本来白黒なので 0.5 が標準）
+  use_sdf: false                   # true で二値化後に SDF 変換を適用（細ストローク改善用）
+  sdf_max_dist: 10.0               # SDF の正規化距離 (px)。data.use_sdf=true のとき有効（64px なので基準値 10.0 = 10.0 × H/64）
+  sdf_source: auto                 # auto: real_data_dir に sdf/ があれば事前計算済みをロード、無ければ計算
+                                   #   precomputed: 常に sdf/ からロード
+                                   #   compute: 常に binary_image_to_sdf で計算（旧データセット相当）
+  image_size: 64                   # 入力画像の正方形サイズ (px)
+  image_channels: 1                # 画像チャネル数: 3=RGB, 1=grayscale。model.channels と一致させること
+  batch_size: 128                   # ミニバッチサイズ。GPU メモリに応じて調整
+  val_split: 0.15                  # val セットの割合 (font_family 数基準)
+  test_split: 0.15                 # test セットの割合 (font_family 数基準)
+  num_workers: 4                   # DataLoader ワーカー数。CPU コア数に合わせる
+  seed: 42                         # train/val/test 分割の再現性シード
+
+model:
+  # ---- Unet アーキテクチャ ----
+  dim: 64                          # 基底チャネル数。大きいほど表現力↑・メモリ↑
+  dim_mults: [1, 2, 4, 8]          # 各解像度でのチャネル倍率。積が最深部のチャネル数 (64*8=512)
+  channels: 1                      # 入力画像チャネル数 (RGB=3, grayscale=1)。data.image_channels と一致させること
+  cond_drop_prob: 0.1             # 学習時のクラス埋め込みドロップ率 (CFG 用)
+                                   #   0.0: null 埋め込み未学習 → CFG 無効
+                                   #   0.1〜0.5: null 埋め込みを学習 → 推論時に CFG 使用可能
+  attn_dim_head: 32                # Attention の 1 ヘッドあたりの次元数
+  attn_heads: 4                    # Attention のヘッド数 (総次元 = attn_dim_head * attn_heads = 128)
+
+  # ---- GaussianDiffusion ----
+  image_size: 64                   # data.image_size と合わせる (モデル側の制約チェック用)
+  timesteps: 1000                  # 拡散プロセスの総ノイズステップ数 (学習時)
+  sampling_timesteps: 100          # DDIM サンプリングのステップ数。None で DDPM (1000 steps)
+                                   #   少ないほど高速だが品質が下がる。50〜200 が実用的
+  objective: "pred_x0"         # 学習目標: pred_noise (ε) / pred_x0 / pred_v
+                                   #   pred_x0: モデルが直接クリーン画像を予測。perceptual_loss と相性が良い
+  beta_schedule: "cosine"          # ノイズスケジュール: cosine (構造画像に有利) / linear
+  offset_noise_strength: 0.0       # オフセットノイズの強度。0.0 で無効
+                                   #   0.1 程度にすると暗い/明るい全体トーンの多様性が増す
+  min_snr_loss_weight: true       # Min-SNR 損失重み付け (Hang et al., ICCV 2023)
+                                   #   true にすると高ノイズ域の損失を抑えて収束が安定しやすい
+  use_cfg_plus_plus: false         # CFG++ (Chung et al., 2024) の平行成分除去を使うか
+                                   #   true: サンプリング品質が上がるが cond_drop_prob>0 が必要
+
+  # ---- Optimizer / Scheduler ----
+  lr: 1.0e-4                       # ピーク学習率
+  weight_decay: 1.0e-2             # AdamW の weight decay
+  lr_warmup_steps: 1000            # Linear warmup のステップ数 (全体の約 1%)
+  use_lr_scheduler: true           # false にすると定数 LR (デバッグ用)
+  # lr_total_steps は trainer.max_steps から自動設定される (train_diffusion.py 参照)
+
+  # ---- 学習中サンプリング ----
+  sample_every_n_val_checks: 10     # 何 val_check ごとに中間サンプルを TensorBoard に保存するか
+  sample_cond_scale: 1.0           # 学習中サンプリング時の CFG スケール
+                                   #   cond_drop_prob=0.0 の場合は 1.0 に合わせること
+  sample_n_images: 64              # 学習中サンプリングの生成枚数（4×4 グリッド）
+                                   #   num_classes が少ない場合でも複数枚生成するために使う
+
+  # ---- EMA ----
+  ema_decay: 0.9999                # EMA 平滑化係数。大きいほど平滑化が強い
+  ema_start_step: 1000             # EMA 更新を開始するグローバルステップ（lr_warmup_steps と揃える）
+
+  # ---- FID tracking ----
+  fid_every_n_val_checks: 10        # 0 で無効。N val_check ごとに FID を計算して TensorBoard に記録
+  fid_n_samples: 256               # FID 計算に使う生成・実画像のサンプル数
+  fid_splits:                      # FID の参照分布に使うスプリット（複数指定で各スプリットを個別ログ）
+    - val
+    - train
+
+  # ---- Perceptual loss on x̂_0 ----
+  perceptual_weight: 0.01          # 0 で無効。0.01〜0.1 程度から試す
+  perceptual_network: "vgg16"      # "lpips" (AlexNet ベース) | "vgg16" (relu2_2 特徴)
+  perceptual_t_max_frac: 0.5       # T の前半 (低ノイズ域) のみ適用。高ノイズ域は x̂_0 推定が荒く有害
+
+  # ---- Stroke-weighted loss ----
+  stroke_weight_alpha: 0.0          # 0 で無効。暗ピクセル（ストローク）の損失を (1 + alpha) 倍に重み付け
+                                   # 試験値: 2.0〜5.0
+  normalize_loss_per_image: true   # true で stroke_density ベースの per-image 正規化（stroke_weight_alpha とは独立）
+
+  # ---- SDF representation ----
+  use_sdf: false                 # data.use_sdf と揃えること
+  sdf_decode: "hard"              # "hard" | "sigmoid" | "smoothstep"
+  sdf_filter_width_px: 1.0        # smoothstep のフィルタ幅 (px)
+  sdf_sharpness: 30.0             # sigmoid モード時の急峻さ
+  sdf_max_dist: 10.0              # data.sdf_max_dist と一致させること
+
+trainer:
+  max_steps: 100000                # 総学習ステップ数。LR スケジューラの T_max も兼ねる
+  val_check_interval: 1.0         # int=ステップ数単位 / float=エポック単位で val を実行
+  log_every_n_steps: 50            # TensorBoard へのログ頻度 (ステップ単位)
+  precision: "16-mixed"            # 混合精度: "16-mixed" (fp16) / "bf16-mixed" / "32"
+  gradient_clip_val: 1.0           # 勾配クリッピングの最大ノルム。発散防止
+  save_every_n_steps: 20000          # 0 で無効。N ステップごとに periodic_step*.ckpt を保存
+  save_periodic_top_k: 1            # -1 で全件保存。N > 0 で直近 N 件のみ保持
+  early_stopping:
+    patience: 50                    # 0 で無効。改善なしを許容するバリデーション回数
+                                   # ※ val_check_interval=1.0(エポック単位)なら patience=エポック数と一致
+    monitor: "val/loss"            # 監視するメトリクス
+    mode: "min"                    # "min" (loss系) / "max" (accuracy系)
+    min_delta: 0.0                 # 改善とみなす最小変化量

@@ -1,0 +1,15 @@
+# 実フォントと生成フォントの間で FID を計算（compute_fid.py）
+# 設定の真実はこの YAML。run_compute_fid.sh は --config でこれを渡す薄いラッパー。
+
+real_dir: "data/datasets/font2dataset_google_uppercase_96_sdf"
+gen_dir: "results/2026-06-17-16-48_diffusion_uppercase_sdf/checkpoints/last-ema"
+output_dir: "results/2026-06-17-16-48_diffusion_uppercase_sdf/checkpoints/last-ema/fid-test"
+
+charset: "uppercase"
+image_size: 96
+batch_size: 64
+num_workers: 4
+tsne_max_samples: 2000          # t-SNE に使う最大サンプル数（多いと低速）
+tsne_perplexity: 30             # t-SNE の perplexity
+split_file: "config/splits/split_ascii_seed42.yaml"  # null で全件
+split: "test"                   # train / val / test / all

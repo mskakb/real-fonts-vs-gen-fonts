@@ -1,0 +1,9 @@
+# 実フォントの train/val/test スプリットを生成（make_split.py）
+# 設定の真実はこの YAML。run_make_split.sh は --config でこれを渡す薄いラッパー。
+
+real_dir: "data/datasets/font2dataset_ascii_google"
+charset: "ascii"
+val_split: 0.15
+test_split: 0.15
+seed: 44
+output: "config/splits/split_ascii_seed44.yaml"

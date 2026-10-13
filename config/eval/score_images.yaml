@@ -1,0 +1,14 @@
+# 学習済み Scorer でデータセット内の全画像にスコアを付与（score_images.py）
+# 設定の真実はこの YAML。run_score_images.sh は --config でこれを渡す薄いラッパー。
+
+scorer_ckpt: "models/2026-06-15-11-30_scorer_H/checkpoints/last.ckpt"
+data_dirs:                      # images/ + metadata.parquet を含むディレクトリ（複数可）
+  - "data/datasets/font2dataset_upper_google_64"
+  - "results/2026-06-06-15-50_diffusion_uppercase/checkpoints/last-ema"
+output_dir: "models/2026-06-15-11-30_scorer_H/checkpoints/last/score"
+
+image_size: 64
+batch_size: 128
+binarize_threshold: 0.5         # Scorer 学習時と合わせる。無効化は負値（例: -1）
+use_ema: true                   # false で生（非 EMA）の Scorer 重みを使用
+overwrite: false                # true で既存スコアを再計算

@@ -1,0 +1,77 @@
+experiment_name: "scorer_uppercase"   # setup_experiment_dir が日時接頭辞を自動付与
+comment: ""                         # 実験メモ。非空なら experiment_name に _{comment} を付加
+output_root: "models"
+
+# ベーシック構成: ResNet50 + 線形ヘッド + RankNet ranking + 軽量augmentation + charset="uppercase"
+# config/scorer_classifier_basic.yaml (BCE版) と条件 (charset/aug/ヘッド構成) を揃えた
+# RankNet版ベースライン。tie-ranking 拡張も外し、純粋なペアワイズ ranking 損失のみで学習する。
+# analyze_scorer_features.py の layer4 線形プローブ (sklearn, test AUROC≈0.9) と比較するための
+# 「ヘッド構成」1変数のみを切り出したベースライン。
+
+data:
+  real_data_dir: "data/datasets/font2dataset_google_uppercase_96_sdf"
+  gen_data_dir: "results/2026-06-17-16-48_diffusion_uppercase_sdf/checkpoints/last-ema"
+  mode: "ranking"                  # "ranking" | "scorer"（分類）
+  pair_sampling: "random"          # "random" | "same_char" | "in_batch_hard"
+  charset: "uppercase"             # 拡散モデルの学習時と合わせる
+  split_file: "config/splits/split_ascii_seed42.yaml"  # null で動的計算
+  gen_split_file: "results/2026-06-17-16-48_diffusion_uppercase_sdf/checkpoints/last-ema/gen_split_seed42.yaml"  # null でランダム分割
+  binarize_threshold: null          # 学習データの前処理のみ。誘導サンプリング時は非適用
+  use_sdf: true        # true で real/gen 両方を SDF 表現で扱う（real/gen とも sdf/ 済み）
+  sdf_source: auto      # auto（sdf/ あれば precomputed・無ければ計算）| precomputed | compute
+  sdf_max_dist: 15.0    # real/gen データセットの生成時 max_dist (15.0, 96px) に揃える
+  sdf_decode: hard      # null=raw SDF を入力 / "hard"|"sigmoid"|"smoothstep" でグレースケール decode
+  sdf_sharpness: null   # sdf_decode="sigmoid" のときの sharpness
+  sdf_filter_width_px: 1.5  # sdf_decode="smoothstep" の遷移帯の半幅(px)
+  aug_scale: null                  # スケール augmentation なし
+  aug_translate: [0.1, 0.1]       # 軽量平行移動（過学習抑制）
+  image_size: 96
+  batch_size: 96
+  val_split: 0.15
+  test_split: 0.15
+  num_workers: 4
+  seed: 42
+
+model:
+  ranking: true                    # false で分類モード（BCE）
+  pair_sampling: "random"          # data.pair_sampling と同じ値を指定
+  backbone: resnet50               # resnet18 | resnet50（torchvision ResNet 系）
+  pretrained: false
+  dropout: 0.3                     # hidden_dim=null のため未使用
+  hidden_dim: null                 # ベーシック構成: 1層線形ヘッド (Linear(feature_dim, 1))
+  label_smoothing: 0.0             # 分類モード (ranking=false) のみ使用
+  tie_weight_real: 0.0             # ベーシック構成: tie-rankingなし
+  tie_weight_gen: 0.0               # ベーシック構成: tie-rankingなし
+  # optimizer / scheduler
+  lr: 1.0e-4
+  backbone_lr_scale: 1.0
+  weight_decay: 1.0e-2
+  lr_warmup_steps: 500
+  freeze_backbone_steps: 0
+  # lr_total_steps は trainer.max_steps から自動設定される (train_scorer.py 参照)
+  # ---- LR scheduler ----
+  scheduler: plateau        # cosine（warmup→CosineAnnealing）| plateau（ReduceLROnPlateau, warmup無効）
+  plateau_factor: 0.5      # plateau 時に lr に掛ける係数
+  plateau_patience: 100      # 改善なしを許容する検証回数（val_check_interval 単位）
+  plateau_threshold: 1.0e-4
+  plateau_min_lr: 1.0e-6
+  plateau_cooldown: 10
+  plateau_monitor: "val/loss"   # mode=min を想定
+  plateau_mode: "min"
+  # ---- EMA ----
+  ema_decay: 0.999                 # EMA 平滑化係数。Scorer は学習が速いため diffusion (0.9999) より短め
+  ema_start_step: 0                # EMA 更新を開始するグローバルステップ
+
+trainer:
+  max_steps: 200000
+  val_check_interval: 100             # float=エポック単位（int にするとステップ数指定）
+  log_every_n_steps: 50
+  precision: "16-mixed"
+  gradient_clip_val: 1.0
+  save_every_n_steps: 10000           # 0 で無効。N ステップごとに periodic_step*.ckpt を保存
+  save_periodic_top_k: 1             # -1 で全件保存。N > 0 で直近 N 件のみ保持
+  early_stopping:
+    patience: 0                       # 0 で無効。改善なしを許容するバリデーション回数
+    monitor: "val/loss"              # 監視するメトリクス
+    mode: "min"                       # "min" (loss系) / "max" (accuracy系)
+    min_delta: 0.0                    # 改善とみなす最小変化量

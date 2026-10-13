@@ -1,0 +1,67 @@
+experiment_name: "scorer_classifier"
+comment: ""                         # 実験メモ。非空なら experiment_name に _{comment} を付加
+output_root: "outputs"              # 本番: run_pipeline.sh で上書き
+
+data:
+  real_data_dir: "data/raw/real"   # 本番: run_pipeline.sh で上書き
+  gen_data_dir: "data/raw/generated"   # 本番: run_pipeline.sh で上書き
+  mode: "scorer"                   # classifier (BCE) モード固定
+  charset: "uppercase"
+  split_file: null                 # make_split.py が生成した split.yaml のパス。null で動的計算
+  gen_split_file: null             # make_gen_split.py が生成した gen_split.yaml のパス。null でランダム分割
+  binarize_threshold: 0.5          # 学習データの前処理のみ。誘導サンプリング時は非適用
+  use_sdf: false        # true で real/gen 両方を SDF 表現で扱う
+  sdf_source: auto      # auto（sdf/ あれば precomputed・無ければ計算）| precomputed | compute
+  sdf_max_dist: 10.0    # real/gen の生成時 max_dist と揃える（基準 64px=10、解像度に線形）
+  sdf_decode: null      # null=raw SDF を入力 / "hard"|"sigmoid"|"smoothstep" でグレースケール decode
+  sdf_sharpness: null   # sdf_decode="sigmoid" のときの sharpness
+  sdf_filter_width_px: 1.5  # sdf_decode="smoothstep" の遷移帯の半幅(px)
+  aug_scale: null       # e.g. [0.9, 1.1] — ランダムスケール範囲。null で無効（train のみ適用）
+  aug_translate: [0.05, 0.05]  # e.g. [0.1, 0.1] — 最大平行移動割合 (x, y)。null で無効（train のみ適用）
+  image_size: 64
+  batch_size: 64
+  val_split: 0.15
+  test_split: 0.15
+  num_workers: 4
+  seed: 42
+
+model:
+  ranking: false                   # classifier (BCE) モード固定
+  backbone: resnet18               # resnet18 | resnet50（torchvision ResNet 系）
+  pretrained: false
+  dropout: 0.3
+  hidden_dim: 512
+  label_smoothing: 0.1             # classifier モードのラベル平滑化強度
+  # optimizer / scheduler
+  lr: 1.0e-4
+  backbone_lr_scale: 1.0
+  weight_decay: 1.0e-2
+  lr_warmup_steps: 500
+  freeze_backbone_steps: 0
+  # lr_total_steps は trainer.max_steps から自動設定される (train_scorer_classifier.py 参照)
+  # ---- LR scheduler ----
+  scheduler: cosine        # cosine（warmup→CosineAnnealing）| plateau（ReduceLROnPlateau, warmup無効）
+  plateau_factor: 0.5      # plateau 時に lr に掛ける係数
+  plateau_patience: 5      # 改善なしを許容する検証回数（val_check_interval 単位）
+  plateau_threshold: 1.0e-4
+  plateau_min_lr: 1.0e-6
+  plateau_cooldown: 0
+  plateau_monitor: "val/loss"   # mode=min を想定
+  plateau_mode: "min"
+  # ---- EMA ----
+  ema_decay: 0.999                 # EMA 平滑化係数。Scorer は学習が速いため diffusion (0.9999) より短め
+  ema_start_step: 0                # EMA 更新を開始するグローバルステップ
+
+trainer:
+  max_steps: 10000
+  val_check_interval: 1.0             # float=エポック単位（int にするとステップ数指定）
+  log_every_n_steps: 50
+  precision: "16-mixed"
+  gradient_clip_val: 1.0
+  save_every_n_steps: 10000           # 0 で無効。N ステップごとに periodic_step*.ckpt を保存
+  save_periodic_top_k: 1             # -1 で全件保存。N > 0 で直近 N 件のみ保持
+  early_stopping:
+    patience: 0                       # 0 で無効。改善なしを許容するバリデーション回数
+    monitor: "val/loss"              # 監視するメトリクス
+    mode: "min"                       # "min" (loss系) / "max" (accuracy系)
+    min_delta: 0.0                    # 改善とみなす最小変化量

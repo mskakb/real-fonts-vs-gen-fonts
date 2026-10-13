@@ -1,0 +1,78 @@
+# run_eval_suite.py の設定。
+#
+# 他の config/eval/*.yaml（compute_fid.yaml 等）が単一データセットを指すのに対し、
+# これは Scorer チェックポイントのリスト + ステップ別パラメータを持つ。任意個数の
+# チェックポイントを追加でき、各チェックポイントに対して steps 以下の解析を
+# 一括実行する（extract_features -> analyze_features/analyze_frequency/analyze_occlusion
+# -> visualize_occlusion/visualize_gradcam/analyze_attention の順）。
+#
+# visualize_gradcam は ViT backbone のチェックポイントで、analyze_attention は
+# ViT 以外の backbone で自動的に skip される（checkpoint の config.yaml の
+# model.backbone から判定）。
+
+output_root: "results/eval_suite"
+
+checkpoints:
+  - name: ranking_128_genkai
+    checkpoint: "models/2026-08-17-12-20_scorer_uppercase_sdf_128_genkai/checkpoints/step184809-auroc0.8972.ckpt"
+    config: "models/2026-08-17-12-20_scorer_uppercase_sdf_128_genkai/config_local.yaml"
+    use_ema: true
+  - name: ranking_256_genkai
+    checkpoint: "models/2026-08-17-12-20_scorer_uppercase_sdf_256_genkai/checkpoints/step180114-auroc0.9445.ckpt"
+    config: "models/2026-08-17-12-20_scorer_uppercase_sdf_256_genkai/config_local.yaml"
+    use_ema: true
+  - name: classifier_128_genkai
+    checkpoint: "models/2026-08-18-05-37_scorer_classifier_uppercase_sdf_128_genkai/checkpoints/step195620-auroc0.7413.ckpt"
+    config: "models/2026-08-18-05-37_scorer_classifier_uppercase_sdf_128_genkai/config_local.yaml"
+    use_ema: true
+  - name: classifier_256_genkai
+    checkpoint: "models/2026-08-19-13-05_scorer_classifier_uppercase_sdf_256_genkai/checkpoints/step267234-auroc0.8559.ckpt"
+    config: "models/2026-08-19-13-05_scorer_classifier_uppercase_sdf_256_genkai/config_local.yaml"
+    use_ema: true
+
+steps:
+  extract_features:
+    enabled: true
+    split: all
+    batch_size: 64
+
+  analyze_features:
+    enabled: true
+    stats_split: test
+    reducer: tsne
+    embedding_layer: layer4
+
+  analyze_frequency:
+    enabled: true
+    split: all
+    stats_split: test
+    fit_split: train
+
+  analyze_occlusion:
+    enabled: true
+    patch_sizes: [8, 16, 32]
+    all_chars: true
+    label: both
+    split: test
+    n_images: 10
+    pop_samples: 1500
+    embedding_layer: layer4
+    reducer: tsne
+    min_change: 0.02
+
+  visualize_occlusion:
+    enabled: true
+    split: test
+    n_samples: 25
+    all_chars: true
+
+  visualize_gradcam:
+    enabled: true
+    split: test
+    n_samples: 25
+    all_chars: true
+
+  analyze_attention:
+    enabled: true
+    split: test
+    n_images: 4

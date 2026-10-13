@@ -1,0 +1,23 @@
+output_dir: "results/2026-06-17-16-48_diffusion_uppercase_sdf/checkpoints/last-ema"
+
+# モデル・重み（CLI フラグでも指定可。CLI が config を上書きする）
+checkpoint: "models/2026-06-17-16-48_diffusion_uppercase_sdf/checkpoints/last.ckpt"             # null なら CLI --checkpoint 必須。パスを書けば既定として使用
+scorer: null                 # null で無効。ScorerModule ckpt を指定すると realness_score を付与
+use_ema: true                # diffusion の EMA 重みでサンプリング（CLI --no-ema で上書き可）
+scorer_use_ema: true         # Scorer の EMA 重みを使用（CLI --scorer-no-ema で上書き可）
+
+# 生成条件
+charset: "uppercase"                # 学習時と合わせる
+cond_scales: [1.0]           # cond_drop_prob=0.0 学習は 1.0 のみ。CFG ありは [1.0,3.0,6.0]
+n_samples_per_class: 3800    # total dataset samples (A-Z) = 97595 (3800/char)
+sampling_timesteps: [100]    # DDIM ステップ数。リストで複数指定可。1000=フル DDPM
+
+# 後処理
+binarize_threshold: 0.5     # null で無効。0.5 程度が標準（グレー背景除去）
+sdf_sharpness: null          # null でハード閾値。20〜50 でソフト sigmoid 変換（ジャギー対策、use_sdf=true のみ有効）
+save_sdf: true              # true で生 SDF を sdf/ に併存保存（モデルが use_sdf=true のときのみ。precomputed SDF 入力として再利用可）
+min_score_threshold: null    # null で無効。--scorer 指定時のみ有効。score < 閾値の画像を保存しない
+
+# 実行設定
+batch_size: 128
+seed: 0

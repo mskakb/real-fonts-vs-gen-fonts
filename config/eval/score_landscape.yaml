@@ -1,0 +1,13 @@
+# E2: s(x̂_0) vs. timestep t の可視化（score_landscape.py）
+# 設定の真実はこの YAML。run_score_landscape.sh は --config でこれを渡す薄いラッパー。
+
+diffusion_ckpt: "models/2026-05-20_diffusion_H/checkpoints/last.ckpt"
+scorer_ckpt: "models/2026-05-21_scorer_H/checkpoints/last.ckpt"
+output_dir: "results/score_landscape/2026-05-21_scorer_H/checkpoints/last"
+
+charset: "H"
+n_samples: 64
+cond_scales: [1.0]              # CFG++ guidance scale（複数指定可）
+sampling_timesteps: [50, 100, 1000]   # DDIM ステップ（複数指定可）。1000=フル DDPM
+seed: 0
+use_ema: true                   # false で生（非 EMA）の Scorer 重みを使用

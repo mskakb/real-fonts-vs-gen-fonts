@@ -1,0 +1,26 @@
+# 128px 拡散モデル × classifier(BCE) Scorer のラウンドトリップ検証（verify_roundtrip.py）
+# 設定の真実はこの YAML。run_verify_roundtrip_128_classifier.sh は --config でこれを渡す薄いラッパー。
+
+diffusion_ckpt: "models/2026-07-16-10-35_diffusion_uppercase_sdf_128_genkai/checkpoints/last.ckpt"
+scorer_ckpt: "models/2026-08-18-05-37_scorer_classifier_uppercase_sdf_128_genkai/checkpoints/last.ckpt"
+output_dir: "results/verify_roundtrip/verify_roundtrip_128_classifier"
+real_data_dir: "data/datasets/font2dataset_google_uppercase_128_sdf"
+split_file: "config/splits/split_ascii_seed42.yaml"
+
+charset: "uppercase"
+split: "test"               # test / val / train
+n_samples: 1000
+chunk_size: 64                # 1 回の GPU forward に載せる枚数の上限（学習時バッチサイズ相当）。n_samples がこれより大きくてもチャンク分割して逐次処理する
+noise_steps: [1, 100, 300, 500, 700, 900]   # N: forward で q_sample する時刻 (0..num_timesteps-1)
+ddim_reverse_steps: [50]                 # M: N から 0 まで戻す DDIM ステップ数（N と独立に指定可）
+cond_scale: 6.0
+rescaled_phi: 0.7
+seed: 0
+use_ema: true                # true で diffusion の EMA 重みを使用
+scorer_use_ema: true         # true で Scorer の EMA 重みを使用
+
+sdf_decode: "hard"           # use_sdf=true のモデルのみ有効。Scorer 比較前に real/roundtrip 双方を decode
+sdf_sharpness: null          # sdf_decode="sigmoid" のときのみ使用
+sdf_filter_width_px: 1.0     # sdf_decode="smoothstep" のときのみ使用
+
+n_grid_images: 8             # 可視化グリッドに含めるサンプル数
